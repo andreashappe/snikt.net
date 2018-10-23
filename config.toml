@@ -1,0 +1,46 @@
+baseURL = "https://snikt.net/"
+languageCode = "en-us"
+title = "Andreas Happe"
+theme = "hugo-theme-minos"
+paginate = 10
+
+[[menu.main]]
+	name = "Linux"
+	url = "/tags/linux"
+	weight = -90
+
+[[menu.main]]
+	name = "Ruby/Rails"
+	url = "/tags/rails"
+	weight = -100
+
+[[menu.main]]
+	name = "Security"
+	url = "/tags/security"
+	weight = -110
+
+[[menu.main]]
+	name = "Life"
+	url = "/tags/life"
+	weight = -120
+
+[[menu.main]]
+	name = "All Categories"
+	url = "/tags"
+
+[[menu.main]]
+	name = "RSS"
+	url = "/feed.xml"
+
+[params]
+	smartToc = true
+	disqusShortname = "signalnoise"
+	googleAnalytics = "UA-2424774-4"
+
+[outputs]
+home = [ "RSS", "HTML"]
+
+[outputFormats]
+[outputFormats.RSS]
+	mediatype = "application/rss"
+	baseName = "feed"
