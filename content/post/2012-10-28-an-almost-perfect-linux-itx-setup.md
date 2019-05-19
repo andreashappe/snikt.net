@@ -18,24 +18,18 @@ By now I'm mostly doing Ruby on Rails and Python development, both ofthem do not
 
 After some research I came up with the following components:
 
-{::options parse_block_html="true" /}
-
-<div class="table table-bordered table-condensed table-striped">
-
-| Category | Selected Component | Any reason at all? |
-|:---- | :---- | :--- |
-| Case | [SilverStone Sugo-SG05](http://www.amazon.com/gp/product/B008J0ZQCU/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008J0ZQCU&linkCode=as2&tag=arthho-20) | Small and cool |
-| Processor | [Intel i5-3570K](http://www.amazon.com/gp/product/B007SZ0E1K/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B007SZ0E1K&linkCode=as2&tag=arthho-20) | Power usage and Intel's ongoing Linux support |
-| Mainboard | [ASRock Z77E Mini-ITX](http://www.amazon.com/gp/product/B007RS71O6/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B007RS71O6&linkCode=as2&tag=arthho-20) | lots of features within small space|
-| Memory | [Kingston 2*8 GB HyperX Red](http://www.amazon.com/gp/product/B008XQ9PEA/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008XQ9PEA&linkCode=as2&tag=arthho-20) | Fits beneath the CPU cooler and XMI support |
-| System Storage | [Transcend mSATA 64GB](http://www.amazon.com/gp/product/B0089YM46C/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0089YM46C&linkCode=as2&tag=arthho-20) | small and fast |
-| Data Storage | [OCZ Vertex 2 240GB SSD](http://www.amazon.com/gp/product/B0085U6ZBK/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0085U6ZBK&linkCode=as2&tag=arthho-20) | already had this one |
-| Data Storage | [Samsung 830, 256GB SSD](http://www.amazon.com/gp/product/B0077CR66A/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0077CR66A&linkCode=as2&tag=arthho-20) | good performance combined with low power usage |
-| Graphics Card | nVidia GeForce 9800GTX | already had this one |
-| Cooling Solution | Stock Intel Cooler | Instead of the planned Silverstone passive cooler |
-| Optical Drive | none | still thinking about using a second SSD instead of an optical drive |
-
-</div>
+ Category | Selected Component | Any reason at all?
+----- | ----- | ---
+ Case | [SilverStone Sugo-SG05](http://www.amazon.com/gp/product/B008J0ZQCU/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008J0ZQCU&linkCode=as2&tag=arthho-20) | Small and cool
+ Processor | [Intel i5-3570K](http://www.amazon.com/gp/product/B007SZ0E1K/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B007SZ0E1K&linkCode=as2&tag=arthho-20) | Power usage and Intel's ongoing Linux support
+ Mainboard | [ASRock Z77E Mini-ITX](http://www.amazon.com/gp/product/B007RS71O6/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B007RS71O6&linkCode=as2&tag=arthho-20) | lots of features within small space
+ Memory | [Kingston 2*8 GB HyperX Red](http://www.amazon.com/gp/product/B008XQ9PEA/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008XQ9PEA&linkCode=as2&tag=arthho-20) | Fits beneath the CPU cooler and XMI support
+ System Storage | [Transcend mSATA 64GB](http://www.amazon.com/gp/product/B0089YM46C/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0089YM46C&linkCode=as2&tag=arthho-20) | small and fast
+ Data Storage | [OCZ Vertex 2 240GB SSD](http://www.amazon.com/gp/product/B0085U6ZBK/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0085U6ZBK&linkCode=as2&tag=arthho-20) | already had this one
+ Data Storage | [Samsung 830, 256GB SSD](http://www.amazon.com/gp/product/B0077CR66A/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0077CR66A&linkCode=as2&tag=arthho-20) | good performance combined with low power usage
+ Graphics Card | nVidia GeForce 9800GTX | already had this one
+ Cooling Solution | Stock Intel Cooler | Instead of the planned Silverstone passive cooler
+ Optical Drive | none | still thinking about using a second SSD instead of an optical drive
 
 ## No plan survives enemy contact
 

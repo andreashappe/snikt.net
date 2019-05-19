@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://snikt.net/"
 languageCode = "en"
 defaultContentLanguage = "en"
 title = "Andreas Happe: signal/noise"
