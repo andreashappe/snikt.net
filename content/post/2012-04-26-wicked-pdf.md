@@ -1,6 +1,6 @@
 ---
 layout: post
-tags : ["rails"]
+categories: ["tech", "development", "rails"]
 title: Generating PDFs with wicked_pdf
 description: "wicked_pdf allows generating PDFs from ruby on rails, for free!"
 keywords: "wicked_pdf, PDF, ruby on rails, generating pdf, wkhtmltopdf"

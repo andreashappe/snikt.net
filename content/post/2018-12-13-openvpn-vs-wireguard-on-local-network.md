@@ -1,7 +1,7 @@
 ---
 title: Wireguard vs OpenVPN on a local Gigabit Network
 date: 2018-12-13
-tags: ["tech"]
+categories: ["tech", "security"]
 ---
 
 [Wireguard](https://www.wireguard.com/) is recently making a splash as human-configurable low-overhead alternative to [OpenVPN](https://openvpn.net/) and IPSec. As some privacy-centric VPN providers are planning to support it (e.g., [PIA](https://www.privateinternetaccess.com/pages/buy-vpn/SNIKT001)) or already have a beta running (e.g., [IVPN, as tested by Ars Technica](https://arstechnica.com/gadgets/2018/12/testing-wireguard-with-an-early-adopter-vpn-service/)) it was time for me to look into it.

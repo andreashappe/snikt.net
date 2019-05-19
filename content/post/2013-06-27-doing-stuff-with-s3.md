@@ -1,6 +1,6 @@
 ---
 layout: post
-tags : ["security"]
+categories: ["security", "tech"]
 title: Encrypted S3 storage filesystems
 description: "Trying to use two s3-based storage methods that provide transparent encryption and compression"
 aliases:

@@ -4,7 +4,7 @@ title: "Postgres: Howto change owner for all tables"
 date: 2012-11-11
 aliases:
   - /blog/2012/11/11/howto-change-table-owners-in-postgres
-tags: ["linux", "database", "postgres"]
+categories: ["linux", "tech", "postgres"]
 description: "Howto change owner of all tables of a database (in postgresql)"
 keywords: "postgresql, postgres, owner, linux, change ownership, change owner"
 ---

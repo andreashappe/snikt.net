@@ -4,7 +4,7 @@ title: pathogen vs vundle
 date: 2015-02-18
 aliases:
   - /blog/2014/09/12/pathogen-vs-vundle
-tags: ["linux", "vim"]
+categories: ["tech", "linux", "vim"]
 ---
 
 [Pathogen](https://github.com/tpope/vim-pathogen) was the first vim plugin

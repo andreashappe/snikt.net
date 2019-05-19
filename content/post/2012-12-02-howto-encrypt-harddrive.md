@@ -5,7 +5,7 @@ date: 2012-12-02
 comments: true
 aliases:
   - /blog/2012/12/02/howto-encrypt-harddrive
-tags: ["linux", "security", "encryption"]
+categories: ["linux", "security", "privacy"]
 description: "How to transparently encrypt hard drives/USB sticks/etc."
 keywords: "Linux, encryption, security, ecryptfs, dmcrypt, LUKS, cryptsetup, hard drive, SSD, usb, usb stick"
 ---

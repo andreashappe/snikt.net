@@ -4,7 +4,7 @@ title: Migrating to Middleman
 date: 2014-09-09
 aliases:
   - /blog/2014/09/09/migrating-to-middleman
-tags: ["linux", "rails"]
+categories: ["linux", "rails", "tech"]
 ---
 
 My blog has a history of migrations. It started as wordpress, then was converted

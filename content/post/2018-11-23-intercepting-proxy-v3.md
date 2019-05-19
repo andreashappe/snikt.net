@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: ["security", "linux", "network"]
+categories: ["security", "linux", "network"]
 title: Revising my lazy http/https interception setup
 description: "Lazily creating an HTTP/HTTPS interception proxy with network-manager and mitmproxy"
 date: 2018-11-23

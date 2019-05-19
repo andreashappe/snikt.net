@@ -1,6 +1,6 @@
 ---
 layout: post
-tags : ["life"]
+categories: ["life"]
 title: This year's review, 2018 edition
 comments: true
 date: 2018-12-31

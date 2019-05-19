@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JWT: Signature-vs-MAC attacks"
-tags: ["security"]
+categories: ["security"]
 date: 2019-05-16
 ---
 

@@ -4,7 +4,7 @@ date: 2012-10-28
 aliases:
   - /blog/2012/10/28/an-almost-perfect-linux-itx-setup
 comments: true
-tags: ["linux", "hardware"]
+categories: ["tech", "linux", "hardware"]
 description: "Building a mini-ITX high-performance desktop that would fit into a shoebox"
 keywords: "linux, mini-itx, desktop, core i5, cooler, silverstone sg-05, silverstone evolution, asrock z77, Intel Z77"
 ---

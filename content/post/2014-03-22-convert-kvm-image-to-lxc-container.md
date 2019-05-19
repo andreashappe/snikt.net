@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: ["linux", "virtualization"]
+categories: ["tech", "linux", "virtualization"]
 title: "How to use convert an KVM image into a LXC container"
 description: "How to use convert an KVM image into a LXC container"
 keywords: "libvirt virtualization virt-install qemu lvm kvm lxc"

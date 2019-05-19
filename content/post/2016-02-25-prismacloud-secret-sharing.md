@@ -4,7 +4,7 @@ title: "Secret-sharing described by Prismacloud"
 date: 2016-02-27
 aliases:
   - /blog/2016/02/25/prismacloud-secret-sharing
-tags: ["security"]
+categories: ["security"]
 ---
 
 One important part of the European [Prismacloud](https://prismacloud.eu)

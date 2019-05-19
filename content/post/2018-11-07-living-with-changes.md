@@ -2,7 +2,7 @@
 layout: post
 title: "Living with changes"
 date: 2018-11-07
-tags: ["life"]
+categories: ["life"]
 ---
 
 This year seems to bring a lot of changes: I've switched employers after staying on/off at a research center or the last twelve years. When I started there, I was doing cool network coding for the SECOQC quantum key distribution network, it somehow felt as being a part of some bigger undertaking that finally let to something. My work had a tenable outcome, this compensated for the long hours and poor pay. Colleagues were (and have been until the end) good friends and oftentimes mentors.

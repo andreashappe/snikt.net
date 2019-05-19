@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: ["linux-stuff", "virtualization"]
+categories: ["tech", "linux", "virtualization"]
 tags: ["linux", "virtualization"]
 title: "Using a (host) reverse-proxy together with LXC application servers"
 description: "How to combine an reverse proxy (nginx) running on the host with virtualized aplication workers"

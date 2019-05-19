@@ -13,8 +13,8 @@ pygmentsUseClasses = true
 pygmentsCodefencesGuessSyntax = true
 hasCJKLanguage = false
 paginate = 10
-disqusShortname = "snikt-21"
-googleAnalytics = ""
+disqusShortname = "signalnoise"
+googleAnalytics = "UA-2424774-4"
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 [permalinks]
@@ -32,17 +32,17 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   name = "Life"
   weight = 12
   identifier = "life"
-  url = "/"
+  url = "/categories/life"
 [[menu.main]]
   name = "Tech"
   weight = 12
   identifier = "tech"
-  url = "/"
+  url = "/categories/tech"
 [[menu.main]]
   name = "Security"
   weight = 12
   identifier = "security"
-  url = "/"
+  url = "/categories/security"
 [[menu.main]]
   name = "Archives"
   weight = 20
@@ -58,13 +58,13 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   version = "4.x"           # Used to give a friendly message when you have an incompatible update
   debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
 
-  since = "2017"            # Site creation time          # 站点建立时间
+  since = "2013"            # Site creation time          # 站点建立时间
   gitRepo = ""
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
   logoTitle = "Andreas Happe"        # default: the title value    # 默认值: 上面设置的title值
-  keywords = ["Hugo", "theme","even"]
-  description = "Hugo theme even example site."
+  keywords = ["Andreas Happe", "Happe","Ruby on Rails", "Security", "Tech"]
+  description = "Andreas Happe sometimes blogs about developmen, life or security."
 
   archivePaginate = 50
   showArchiveCount = false
@@ -121,14 +121,12 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     options = ""            # default: "{theme: 'simple'}"
 
   [params.social]                                         # 社交链接
-    a-email = "mailto:your@email.com"
-    b-stack-overflow = "http://localhost:1313"
-    c-twitter = "http://localhost:1313"
-    d-facebook = "http://localhost:1313"
-    e-linkedin = "http://localhost:1313"
-    g-github = "http://localhost:1313"
-    m-instagram = "http://localhost:1313"
-    n-gitlab = "http://localhost:1313"
+    a-email = "mailto:andreashappe@snikt.net"
+    b-stack-overflow = "https://stackoverflow.com/users/3868227/andreas-happe"
+    c-twitter = "https://twitter.com/andreashappe"
+    e-linkedin = "https://www.linkedin.com/in/andreashappe/"
+    g-github = "https://github.com/andreashappe"
+    m-instagram = "https://www.instagram.com/andreashappe/"
 
 # See https://gohugo.io/about/hugo-and-gdpr/
 [privacy]

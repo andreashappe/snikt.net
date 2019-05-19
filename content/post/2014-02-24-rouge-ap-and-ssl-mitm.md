@@ -1,6 +1,6 @@
 ---
 layout: "post"
-tags: ["linux", "security"]
+categories: ["linux", "security"]
 title: Rogue Access Point and SSL Man-in-the-Middle the easy way
 description: "How to setup an rogue access point and do ssl interception using KDE and BURP"
 keywords: "SSL TLS mitm rogue accesspoint ap security netsec"

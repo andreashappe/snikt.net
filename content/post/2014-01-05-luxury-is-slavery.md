@@ -4,7 +4,7 @@ title:  "Luxury is Slavery"
 date:   2014-01-05
 aliases:
   - /blog/2014/01/05/luxury-is-slavery
-tags: ["life"]
+categories: ["life"]
 ---
 It's weakness. Well at least un-enjoyed luxury that has become an everyday event is. This has nothing to do with morals.
 

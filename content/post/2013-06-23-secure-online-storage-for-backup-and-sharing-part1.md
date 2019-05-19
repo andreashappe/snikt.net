@@ -1,6 +1,6 @@
 ---
 layout: post
-tags : ["security", "linux"]
+categories : ["security", "linux", "tech", "privacy"]
 title: Secure Online Data Backup using Duplicity
 aliases:
   - /blog/2013/06/23/secure-online-storage-for-backup-and-sharing-part1

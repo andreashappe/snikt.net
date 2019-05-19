@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: ["linux", "virtualization"]
+categories: ["tech", "linux", "virtualization"]
 title: "How to use virt-install to install new virtual machines within libvirt/kvm"
 description: "How to use virt-install to install new virtual machines within libvirt/kvm"
 keywords: "libvirt virtualization virt-install qemu lvm kvm"

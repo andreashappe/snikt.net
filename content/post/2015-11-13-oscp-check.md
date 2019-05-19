@@ -4,7 +4,7 @@ title: "OSCP: Check!"
 date: 2016-02-07
 aliases:
   - /blog/2015/11/13/oscp-check
-tags: ["life", "security"]
+categories: ["life", "security"]
 ---
 
 I have just received my

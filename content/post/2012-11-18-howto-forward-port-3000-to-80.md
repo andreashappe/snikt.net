@@ -5,7 +5,7 @@ date: 2012-11-18
 aliases:
   - /blog/2012/11/18/howto-fordward-port-3000-to-80
 comments: true
-tags: ["linux", "rails", "iptables", "network"]
+categories: ["linux", "tech", "rails"]
 description: "Howto forward port 3000 to port 80 under Linux."
 keywords: "postgresql, postgres, owner, linux, change ownership, change owner"
 ---

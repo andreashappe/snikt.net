@@ -1,5 +1,5 @@
 ---
-tags: ["linux", "security"]
+categories: ["tech", "linux", "security"]
 title: How-to setup a rogue access point with a transparent HTTP(s) proxy
 description: "How to setup a rogue access point with a transparent HTTP(s) proxy"
 keywords: "cloud data amazon S3 fake"

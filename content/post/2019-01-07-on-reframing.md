@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On Reframing
-tags: ["life"]
+categories: ["life"]
 date: 2019-01-07
 ---
 There’s power in switching mental models. In my work, switching from “there might be a vulnerability in this software” to “i just haven’t found the vulnerability” was a game changer for me. I get nervous prior to presentations; one switch that helped me was that instead of thinking “my goal is to look bright” I try to remember that my goal is to teach the audience something and it doesn’t matter who stupid I look as long as they gain something from me.

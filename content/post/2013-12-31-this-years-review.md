@@ -4,7 +4,7 @@ title:  "Review and New Year's resolutions"
 date:   2013-12-31
 aliases:
   - /blog/2013/12/31/this-years-review
-tags: ['life']
+categories: ['life']
 ---
 Yeah, let's make some new year's resolutions so that I can feel bad breaking them. The big ones are:
 

@@ -5,7 +5,7 @@ description: "wicked_pdf allows generating PDFs from ruby on rails, for free!"
 keywords: "linux, ip, pen-testing, penetration testing, bittorrent, routing"
 aliases:
   - /blog/2013/10/10/how-to-force-program-to-use-vpn-tunnel
-tags: ["linux", "virtualization", "security"]
+categories: ["tech", "linux", "virtualization"]
 date: 2013-10-20
 ---
 Somehow I have to use VPN services throughout the day:

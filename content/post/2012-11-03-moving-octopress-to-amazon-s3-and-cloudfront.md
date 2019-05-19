@@ -4,7 +4,7 @@ title: Moving OctoPress to Amazon S3 and CloudFront
 date: 2012-11-03
 aliases:
   - /blog/2012/11/03/moving-octopress-to-amazon-s3-and-cloudfront
-tags: ["linux", "rails", "cloud", "security"]
+categories: ["tech", "linux", "rails", "security"]
 comments: true
 description: "Moving OctoPress to Amazon S3 is easy, but how's the performance?"
 keywords: "octopress, amazon s3, amazon cloudfront, cloudfront, performance, rake, javascript, css, compression, dns"

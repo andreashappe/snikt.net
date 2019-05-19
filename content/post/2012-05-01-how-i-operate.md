@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: ["productivity"]
+categories: ["life"]
 aliases:
   - /blog/2012/05/01/how-i-operate
 title: The Lazy Engineer

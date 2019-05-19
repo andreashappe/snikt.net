@@ -1,6 +1,6 @@
 ---
 layout: "post"
-tags: ["security", "review"]
+categories: ["security"]
 title: "Review: Penetration Testing with BackBox"
 keywords: "pen-test penetration testing BackBox Linux security review"
 aliases:

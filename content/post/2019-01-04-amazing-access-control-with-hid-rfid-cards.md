@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Amazing (Physical) Access Control with HID RFID cards
-tags: ["security", "linux"]
+categories: ["security", "linux"]
 date: 2019-01-04
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-tags : ["security", "linux"]
+categories: ["tech", "security", "linux"]
 title: Git with transparent encryption
 description: "Using encryption to make git handle un-trusted remote storage server"
 aliases:

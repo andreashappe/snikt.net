@@ -4,7 +4,7 @@ title:  "Politics: there seems to be no middle anymore"
 date:   2014-01-26
 aliases:
   - /blog/2014/01/26/theres-no-middle-anymore
-tags: ['life'] 
+categories: ['life'] 
 ---
 Yesterday was this year's "Akademikerball" in Vienna. This is a continuation of the former WKR ball -- which is used for right-wing networking across Europe and organized by the Austrian Freedom Party. This party in turn is a right-wing party: populist, xenophobic, haven of people with a far-right history. Opposed to this party were protests mostly organized by the left-ish social party and the green-alternative party. Police forces were using this event as a show-of-strength. Traditionally the executive is seen as the long arm of the people's party (OeVP) -- a party with historic roots in the christ-fascist party of the '30s, the last decades it is more of a liberal-economic party. True to it roots freedom-of-press and the right-to-assemble were severely limited during the event.
 

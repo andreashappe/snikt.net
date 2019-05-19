@@ -4,7 +4,7 @@ title: "GnuPG/PGP and Evolution/Seahorse Private Key Woes"
 date: 2016-12-01
 aliases:
   - /blog/2016/02/27/evolutino-seahorse-gpg-gpg2-woes
-tags: ["security", "linux"]
+categories: ["security", "linux", "tech"]
 ---
 
 I have a quite simple setup: [Fedora 23](https://getfedora.org/workstation/) on

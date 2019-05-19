@@ -2,7 +2,7 @@
 layout: post
 title: "Fun Hacking Stuff ahead"
 date: 2018-10-23
-tags: ["life", "security", "linux"]
+categories: ["life", "security", "linux"]
 ---
 
 Recently I've found an old post-it with guidelines I wrote myself a couple of years back, two of those stood out:

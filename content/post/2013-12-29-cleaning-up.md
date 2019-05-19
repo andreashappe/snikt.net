@@ -4,7 +4,7 @@ title:  "Cleaning Up"
 date:   2013-12-29
 aliases:
   - /blog/2013/12/29/cleaning-up
-tags: ['life']
+categories: ['life']
 ---
 With the year's end comes the time for reviews and cleanups. Reducing cruft allows your mind to be free, with it comes a sense of closure and empowerement. Otherwise all my possessions would drag me down.
 

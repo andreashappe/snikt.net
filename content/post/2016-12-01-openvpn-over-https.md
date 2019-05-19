@@ -4,7 +4,7 @@ title: "How (NOT) to hide OpenVPN behind HTTPS/SSL"
 date: 2016-12-01
 aliases:
   - /blog/2016/12/01/openvpn-over-https
-tags: ["life", "security", "linux"]
+categories: ["tech", "security", "linux"]
 ---
 
 Update 2017: Sadly I found out (thanks due to the comments on this blog post) that using port-share does not encapsulates subsequent traffic in normal TLS. So using this method will not fool Deep-Package Inspection Firewalls. If you need to mask all your traffic, this is not an option – you might need to investigate stunnel, information can be found [here](https://serverfault.com/questions/675553/stunnel-vpn-traffic-and-ensure-it-looks-like-ssl-traffic-on-port-443), [here](https://www.bestvpn.com/how-to-hide-openvpn-traffic-an-introduction/) or [here](https://www.perfect-privacy.com/howto/openvpn-over-stunnel/). I assume, that the higher success rate of this method could be related to some firewalls checking the target of the initial https request. This would yield a normal website with this setup and might be enough to fool some websites.

@@ -4,7 +4,7 @@ title: Capybara for automating Pen-Tests
 date: 2014-09-09
 aliases:
   - /blog/2014/09/09/capybara-for-automating-pen-tests
-tags: ["linux", "security", "rails"]
+categories: ["linux", "security", "rails", "tech"]
 ---
 
 After a successful penetration test a re-test is performed. The common approach is

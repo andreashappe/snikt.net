@@ -4,7 +4,7 @@ title: "Firejail: Chroot on Speed"
 date: 2016-02-25
 aliases:
   - /blog/2016/02/25/firejail-or-chroot-on-speed
-tags: ["security", "linux"]
+categories: ["security", "linux", "tech"]
 ---
 
 [Firejail](https://firejail.wordpress.com/) describes itself as _a SUID program that reduces the risk of security breaches by restricing the running environment of running programs_. We'll just call it chroot or jail (for the BSDers out there).<!-- more -->

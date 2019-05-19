@@ -5,7 +5,7 @@ date: 2012-12-10
 comments: true
 aliases:
   - /blog/2012/12/10/fighting-survailance-on-the-net
-tags: ["linux", "security"]
+categories: ["tech", "linux", "security", "privacy"]
 description: "How to encrypt most of your communication data on the internet"
 keywords: "Linux, encryption, security, https anywhere, surveillance, surveillance, tunnel, tunneling, vpn, openvpn, socks5, anonymity, network-manager, private internet access"
 ---

@@ -4,7 +4,7 @@ title: Network Concurrency Problem
 date: 2015-11-13
 aliases:
   - /blog/2015/02/18/network-concurrency-problem
-tags: ["software development", "concurrency", "java"]
+categories: ["development", "tech"]
 ---
 
 A [project](https://www.github.com/archistar) I'm involved with has a traditional
