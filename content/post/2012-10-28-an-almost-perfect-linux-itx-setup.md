@@ -20,13 +20,13 @@ After some research I came up with the following components:
 
  Category | Selected Component | Any reason at all?
 ----- | ----- | ---
- Case | [SilverStone Sugo-SG05](http://www.amazon.com/gp/product/B008J0ZQCU/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008J0ZQCU&linkCode=as2&tag=arthho-20) | Small and cool
- Processor | [Intel i5-3570K](http://www.amazon.com/gp/product/B007SZ0E1K/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B007SZ0E1K&linkCode=as2&tag=arthho-20) | Power usage and Intel's ongoing Linux support
- Mainboard | [ASRock Z77E Mini-ITX](http://www.amazon.com/gp/product/B007RS71O6/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B007RS71O6&linkCode=as2&tag=arthho-20) | lots of features within small space
- Memory | [Kingston 2*8 GB HyperX Red](http://www.amazon.com/gp/product/B008XQ9PEA/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008XQ9PEA&linkCode=as2&tag=arthho-20) | Fits beneath the CPU cooler and XMI support
- System Storage | [Transcend mSATA 64GB](http://www.amazon.com/gp/product/B0089YM46C/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0089YM46C&linkCode=as2&tag=arthho-20) | small and fast
- Data Storage | [OCZ Vertex 2 240GB SSD](http://www.amazon.com/gp/product/B0085U6ZBK/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0085U6ZBK&linkCode=as2&tag=arthho-20) | already had this one
- Data Storage | [Samsung 830, 256GB SSD](http://www.amazon.com/gp/product/B0077CR66A/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0077CR66A&linkCode=as2&tag=arthho-20) | good performance combined with low power usage
+ Case | [SilverStone Sugo-SG05](https://amzn.to/2VPqwC4) | Small and cool
+ Processor | [Intel i5-3570K](https://amzn.to/2YEagAy) | Power usage and Intel's ongoing Linux support
+ Mainboard | [ASRock Z77E Mini-ITX](https://amzn.to/2WbrB6p) | lots of features within small space
+ Memory | [Kingston 2*8 GB HyperX Red](https://amzn.to/2QbgZyX) | Fits beneath the CPU cooler and XMI support
+ System Storage | [Transcend mSATA 64GB](https://amzn.to/2VzTuk8) | small and fast
+ Data Storage | [OCZ Vertex 2 240GB SSD](https://amzn.to/2VzN04Z) | already had this one
+ Data Storage | [Samsung 830, 256GB SSD](https://amzn.to/2VzN04Z) | good performance combined with low power usage
  Graphics Card | nVidia GeForce 9800GTX | already had this one
  Cooling Solution | Stock Intel Cooler | Instead of the planned Silverstone passive cooler
  Optical Drive | none | still thinking about using a second SSD instead of an optical drive
@@ -35,13 +35,13 @@ After some research I came up with the following components:
 
 Then I've got all the components and found out some new stuff.
 
-The main problem is the mainboard - cpu cooler - graphics card - memory combination. I wanted to go with a [passive SilverStone CPU cooler](http://www.amazon.com/gp/product/B001O0DOBW/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B001O0DOBW&linkCode=as2&tag=arthho-20), this introduces a rather large heat sink to the equation. Before ordering the components I found out that my first choice of [Kingston Predator memory modules](http://www.amazon.com/gp/product/B008YAI6LS/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008YAI6LS&linkCode=as2&tag=arthho-20) would clash with the cooler: the height of the memory modules would be 5mm to large to fit under the heat sink -- so I switched to [cheaper Kingston HyperX red modules](http://www.amazon.com/gp/product/B008XQ9PEA/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008XQ9PEA&linkCode=as2&tag=arthho-20).
+The main problem is the mainboard - cpu cooler - graphics card - memory combination. I wanted to go with a passive SilverStone CPU cooler, this introduces a rather large heat sink to the equation. Before ordering the components I found out that my first choice of Kingston Predator memory modules would clash with the cooler: the height of the memory modules would be 5mm to large to fit under the heat sink -- so I switched to cheaper Kingston HyperX red modules.
 
-![](/assets/itx-desktop/problem_with_cooler.jpg) I've read [reviews of the case and cooler combination](http://www.silentpcreview.com/Silverstone_SG05_SG06) before I ordered the components. Alas I ordered another motherboard. In contrast to the reviewed [Zotac motherboard](http://www.amazon.com/gp/product/B0089OJHBW/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0089OJHBW&linkCode=as2&tag=arthho-20) I've ordered an ASRock one. While the motherboard is good the placement of the CPU socket in relationship to the graphic card port (PCI express port) is suboptimal. Normally the chipset is situated between those two so there's ample space for cpu coolers. Not so on this board: when mounting the heat sink it is situated directly above the pci express port and blocks it for usage with any graphics card. So I had to switch from passive cooling to the stock Intel CPU cooler for now.
+![](/assets/itx-desktop/problem_with_cooler.jpg) I've read [reviews of the case and cooler combination](http://www.silentpcreview.com/Silverstone_SG05_SG06) before I ordered the components. Alas I ordered another motherboard. In contrast to the reviewed Zotac motherboard I've ordered an ASRock one. While the motherboard is good the placement of the CPU socket in relationship to the graphic card port (PCI express port) is suboptimal. Normally the chipset is situated between those two so there's ample space for cpu coolers. Not so on this board: when mounting the heat sink it is situated directly above the pci express port and blocks it for usage with any graphics card. So I had to switch from passive cooling to the stock Intel CPU cooler for now.
 
 ### Optional mSATA card and Optical Drive
 
-On further inspection I found a mSATA port on the backside of the mainboard. Storage sizes really got small recently. Needless to say that I've gone out and bought a [64Gbyte Transcend mSATA SSD](http://www.amazon.com/gp/product/B0089YM46C/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0089YM46C&linkCode=as2&tag=arthho-20) for my Linux system drive.
+On further inspection I found a mSATA port on the backside of the mainboard. Storage sizes really got small recently. Needless to say that I've gone out and bought a 64Gbyte Transcend mSATA SSD for my Linux system drive.
 My storage configuration itself is sub-optimal. The mSATA board only supports SATAII instead of the SATA 6G that the mSATA card would support (which is not really as much of an issue as this limits the SATA throughput to a merely 300MByte/sec). Ironically I'm using my old OCZ Vertex 2 SSD which only supports SATA2 on a normal SATA 6G port on the front side of the motherboard.
 
 <br/>
@@ -55,7 +55,7 @@ Overall the case supports multiple storage options:
 * 3.5" drive
 * slim-line DVD drive
 
-Currently my Linux system boots from the mSATA card, its home directory is situated on my old [240GB OCZ Vertex 2 SSD](http://www.amazon.com/gp/product/B0085U6ZBK/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0085U6ZBK&linkCode=as2&tag=arthho-20) drive. I have removed the 3.5" drive cage as it partially blocks the air flow. Instead of using an optical drive I will install an additional 2.5" SSD drive ([Samsung Series 830 256GB](http://www.amazon.com/gp/product/B0077CR66A/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0077CR66A&linkCode=as2&tag=arthho-20)) for booting windows into the space originally designed for the optical drive.
+Currently my Linux system boots from the mSATA card, its home directory is situated on my old 240GB OCZ Vertex 2 SSD drive. I have removed the 3.5" drive cage as it partially blocks the air flow. Instead of using an optical drive I will install an additional 2.5" SSD drive (Samsung Series 830 256GB) for booting windows into the space originally designed for the optical drive.
 
 ### Power Supply and Cable Management
 
@@ -73,7 +73,7 @@ The network card is connected through a normal mini PCI Express socket with the 
 
 ### Graphics Card
 
-I planned on using the integrated Intel HD 4000 graphics card until I found a silent or passivly cooled graphics card with good Linux driver support. By now I've found out that the integrated DVI connector on the motherboard only supports a maximum resolution of 1920x1200 which doesn't fit my beautiful [Samsung 27" monitor](http://www.amazon.com/gp/product/B0050X2YZQ/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0050X2YZQ&linkCode=as2&tag=arthho-20) (which would support 2560x1440 natively). The solution would be to use the DisplayPort connector but alas no connection cable was supplied.
+I planned on using the integrated Intel HD 4000 graphics card until I found a silent or passivly cooled graphics card with good Linux driver support. By now I've found out that the integrated DVI connector on the motherboard only supports a maximum resolution of 1920x1200 which doesn't fit my beautiful Samsung 27" monitor (which would support 2560x1440 natively). The solution would be to use the DisplayPort connector but alas no connection cable was supplied.
 
 Until I get the DP cable delivered I'm using my old NVidia GeForce 9800GTX graphics card which (with its 21cm) perfectly fits into the 22cm maximum length limit of the case. Alas it's kinda noisy and uses lots of power.
 
@@ -90,5 +90,3 @@ So far I have a very powerful and small Desktop system with slightly disappointi
 I'm currently looking into replacing the stock Intel CPU fan with a passive CPU cooler (maybe the Samuel 17 will work, otherwise I might be able to refit a passive cooler from a 1HE server) and in graphics card alternatives. I already wanted to replace my old 300W graphics card with a modern one, this should cut power usage (and thus generated temprature) into half or a third while maintaining the same performance.
 
 As soon as the second SSD (for booting Windows) arrives I can start with the final software setup. I'm looking forward into optimizing Linux for SSD usage as well as trying to create an aesthetical pleasing and fast UEFI multi-boot system.
-
-[Stay tuned!](http://snikt.net/atom.xml)

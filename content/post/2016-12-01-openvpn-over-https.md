@@ -14,7 +14,7 @@ but stressy, it also forces me to use wifi networks where most traffic is
 blocked. Often VPN traffic is blocked, but for maximum annoyance sometimes mail
 or SSH access is denied too.
 
-I do have a fast-enough internet connection with a dynamic public IP address at home, so the obvious solution is to setup a VPN server on a small Raspberry/ODROID-class device and use that to circumvent the wifi's internet filters. A commonly suggest way about the egress firewall is to just use the HTTPS port (tcp/443) for the openvpn traffic. This might work in some situations, but as soon as deep-packet inspection is performed this is not feasible anymore.
+I do have a fast-enough internet connection with a dynamic public IP address at home, so the obvious solution is to setup a VPN server on a small [Raspberry](https://amzn.to/2w6Pg9J)/ODROID-class device and use that to circumvent the wifi's internet filters. A commonly suggest way about the egress firewall is to just use the HTTPS port (tcp/443) for the openvpn traffic. This might work in some situations, but as soon as deep-packet inspection is performed this is not feasible anymore.
 
 OpenVPN supports covert operation as a transparent HTTP proxy. If an OpenVPN client connects, the OpenVPN server will create a VPN connection. If a normal browser connects, the original web site is served. The only way for an wifi router to filter this, would be to block all outgoing HTTPS traffic -- highly unlikely in this age where (legitimate) users might want to use banking apps, etc.
 
