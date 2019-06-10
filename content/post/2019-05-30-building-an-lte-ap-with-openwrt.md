@@ -1,8 +1,15 @@
 ---
 layout: post
-title: "Building an LTE Access point with OpenWRT/Rooter"
+title: "Building an LTE Access point with OpenWRT Rooter"
 categories: ["tech"]
 date: 2019-05-30
+keywords:
+- openwrt
+- rooter
+- huawei 4g modem
+- access point
+- lte
+- linux
 ---
 
 My LTE internet connection (70 Mbit downstream, 15 MBit upstream) came with a combined [Huawei B315s LTE modem/access point](https://amzn.to/30QwbXi). As I was using it for the last two to three years a couple of problems did arise:

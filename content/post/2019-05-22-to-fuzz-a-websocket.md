@@ -3,6 +3,11 @@ layout: post
 title: "To Fuzz a WebSocket"
 categories: ["security"]
 date: 2019-05-22
+keywords:
+- websocket
+- fuzzing
+- python
+- owasp top 10
 ---
 
 During a recent assignment the customer server was utilizing a WebSocket for some notification transport, part of my assignment was to fuzz-test the used WebSocket (and the messages transported over it).

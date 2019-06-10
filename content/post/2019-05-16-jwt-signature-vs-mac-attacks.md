@@ -3,6 +3,17 @@ layout: post
 title: "JWT: Signature-vs-MAC attacks"
 categories: ["security"]
 date: 2019-05-16
+keywords:
+- json web token
+- jwt
+- security
+- owasp top 10
+- mac
+- signature
+- confusion
+- vulnerabiltiy
+- python
+- jwks
 ---
 
 During a recent pen-test I stumbled upon a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token)(in short: JWT) based authorization scheme. JWTs consist of three parts: header, payload and verification information. The initial header part contains the name of the algorithm that will later be used to generate the verification part of the JWT. This is dangerous as an attacker can change this information and thus (maybe) control what scheme will be used for verification by the server.
