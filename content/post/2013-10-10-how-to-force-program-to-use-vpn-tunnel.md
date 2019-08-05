@@ -8,6 +8,9 @@ aliases:
 categories: ["tech", "linux", "virtualization"]
 date: 2013-10-20
 ---
+
+**I've changed my approach and am now using a [simple docker setup to achieve the same result](https://snikt.net/blog/2019/08/05/building-a-secure-torrent-download-station-by-combining-private-internet-access-pia-openvpn-and-transmission-through-docker/)**
+
 Somehow I have to use VPN services throughout the day:
 
 * when pen-testing from abroads I really need to login to my company's network first. Otherwise my provider is kinda grumpy when I'm doing fast non-cloaked scans against large companies.

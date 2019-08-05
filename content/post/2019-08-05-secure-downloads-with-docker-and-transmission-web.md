@@ -1,41 +1,32 @@
 ---
 layout: post
-title: "Building a secure torrent download station by combining Private Internet Access (PIA), OpenVPN and transmission through docker-compose on a Raspberry Pi 3b+"
+title: "Building a secure torrent download station by combining Private Internet Access (PIA), OpenVPN and transmission through docker"
 categories: ["tech"]
-date: 2019-06-30
+date: 2019-08-05
 keywords:
 - linux
-- raspberry pi 3b+
 - bridge
 - docker compose
 - openvpn
 - private internet access
 - bittorrent
 - transmission
-draft: true
 ---
 
-Now that I have a [Raspberry Pi Access Point/Router setup](https://snikt.net/blog/2019/06/22/building-an-lte-access-point-with-a-raspberry-pi/) with some memory to spare, I wanted to use it for some network-related tasks. Sometimes I want to work on client assignments (penetration-tests) from home, if I do that I am using my company VPN so that all traffic is routed thorugh their public IP address (which is white-listed by the client). I do not want for traffic to ever leave that VPN as that would look like as if I'd be performing cyber attacks from my private home IP address. The same requirements arise for different use-cases, e.g., when downloading bittorrent files or forcing traffic through the [tor network](https://www.torproject.org/) if whistle-blowing.
+Sometimes I want to work on client assignments (penetration-tests) from home, if I do that I am using my company VPN so that all traffic is routed thorugh their public IP address (which is white-listed by the client). I do not want for traffic to ever leave that VPN as that would look like as if I'd be performing cyber attacks from my private home IP address. The same requirements arise for different use-cases, e.g., when downloading bittorrent files or forcing traffic through the [tor network](https://www.torproject.org/) if whistle-blowing.
 
 To achieve a secure setup I want to combine the following:
 
-* my existing [Raspberry Pi setup](https://snikt.net/blog/2019/06/22/building-an-lte-access-point-with-a-raspberry-pi/)
 * a [Private Internet Access](https://www.privateinternetaccess.com/pages/buy-vpn/SNIKT001) VPN tunnel -- this hides (or should hide) my identity. You can replace that with your company or tor proxy for the other use cases.
-* the software that should run through/behind the VPN. To improve reusability I will setup [docker-compose](https://docs.docker.com/compose/) on my Pi and connect a containter with a bittorrent downloader through that VPN.
+* the software that should run through/behind the VPN. To improve reusability I will use docker images for those.
 
 This setup should be fail-secure: if the VPN tunnel gets disconnected, the bittorrent download container will loose network connectivity. This is good. What you wouldn't want is the container to automatically use my "normal" network connection --- this would use my public IP address and throught that might leak my identity.
 
-I acheived this thorugh following easy steps:
+I did some searching around and found [dperson's docker images](2019-06-30-secure-downloads-with-raspberry-pi-openvpn-pia-docker-and-transmission-web.md) which nicely provide all needed functionality. Sadly the inital setup did not work as smooth as I assumed, so I wrote my setup procedure up.
 
-# Setup OpenVPN with auto-connect
+# Setup OpenVPN image
 
-Let's start with installing openvpn on the Rapsberry Pi:
-
-~~~ bash
-$ sudo apt install openvpn
-~~~
-
-Now we can configure our freshly installed OpenVPN tunnel to automatically start when the system boots. To achieve this, I downloaded the default [(secure) PIA configuration from their homepage](https://www.privateinternetaccess.com/helpdesk/kb/articles/where-can-i-find-your-ovpn-files). For this example, I modified the configuration for the German PIA-Server in Frankfurt and put that into /etc/openvpn/pia_de_frankfurt.conf. Mostly I changed the authentication to use the password/username stored in /etc/openvpn/login.conf:
+The openvpn-client docker image does support [using an user-supplied configuration file](https://github.com/dperson/openvpn-client/issues/141), so I went with that. For testing purposes I've created /tmp/vpn and adapted an PIA openvpn config file to use file-based authentication (change `auth-user-pass` to `auth-user-pass login.conf` in the PIA configuration file). this file must be named `vpn.conf` and be placed within the /tmp/vpn directory (on the host):
 
 ~~~
 client
@@ -51,7 +42,7 @@ auth sha256
 tls-client
 remote-cert-tls server
 
-auth-user-pass
+auth-user-pass login.conf
 compress
 verb 1
 reneg-sec 0
@@ -127,45 +118,51 @@ iyd1Fzx0yujuiXDROLhISLQDRjVVAvawrAtLZWYK31bY7KlezPlQnl/D9Asxe85l
 disable-occ
 ~~~
 
-The username and password are stored in /etc/openvpn/login.conf. The file has a very simplistic format: the first line contains the username, the second line contains the corresponding password:
+The username and password are stored in /tmp/vpn/login.conf. The file has a very simplistic format: the first line contains the username, the second line contains the corresponding password:
 
 ~~~
 username
 password
 ~~~
 
-Now We change the configuration file /etc/default/openvpn to automatically start this tunnel:
-
-~~~
-AUTOSTART="pia_de_frankfurt"
-~~~
-
-Finally we enable auto-starting openVPN on system startup:
+There is another important hint: on Fedora SELinux is in use [and prevents using the host files as docker volumes](
+http://www.projectatomic.io/blog/2015/06/using-volumes-with-docker-can-cause-problems-with-selinux/). To fix this, we need to apply the right label to the VPN directory:
 
 ~~~ bash
-$ sudo systemctl enable openvpn
+sudo chcon -Rt svirt_sandbox_file_t /tmp/vpn
 ~~~
 
-# Setup Docker-Compose
-
-Let's [install the community edition of the docker-engine](https://docs.docker.com/install/linux/docker-ce/debian/#install-using-the-repository) first (the docker version contained within the Raspbian image is too old to be usable for us):
+Now we can start up the OpenVPN-client container:
 
 ~~~ bash
-$ sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
-$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-$ sudo apt update
-$ sudo apt upgrade
-$ sudo apt intall docker-io
+$ sudo docker run -it --cap-add=NET_ADMIN --device /dev/net/tun --name vpn \
+            --dns 8.8.8.8 -v /tmp/vpn:/vpn -d dperson/openvpn-client -f ""
 ~~~
 
-Now install docker-compose on the raspberry pi:
+We pass in the vpn-diretory and use a containter option (`-f ""`) to configure it's firewall to block all traffic if the VPN is not opened (to prevent stray communications from happening).
+
+# Test the VPN tunnel through a minimal image
+
+You should never trust your configuration without testing it.. so let's fire up an alpine linux container, connect it to the internet through the VPN and retrieve our external IP-Adress (which should be different to our Host computer's external IP address):
 
 ~~~ bash
-$ sudo apt install docker-compose docker.io
+$ sudo docker run -it --name shell --net=container:vpn --rm alpine /bin/ash
+/ # wget http://whatismyip.akamai.com/
+Connecting to whatismyip.akamai.com (2.20.189.18:80)
+/ # cat index.html 
+185.220.70.151/ # 
 ~~~
 
-And finally, we can install the [Transmission Web container](https://hub.docker.com/r/linuxserver/transmission/)
+# Use transmission-web images (and an nginx to allow for web access to the container)
 
-# Connect the download container to the VPN
+Now we can start-up additional images for transmission and a web-server for controlling it. We will use the vpn-network configured through the openvpn-client image:
 
-Voila! I hope you can adopt the same pattern for your use-cases.
+~~~ bash
+$ sudo docker run -it --name bit --net=container:vpn -d dperson/transmission
+$ sudo docker run -it --name web -p 80:80 -p 443:443 --link vpn:bit \                        
+            -d dperson/nginx -w "http://bit:9091/transmission;/transmission"
+~~~
+
+Now you should be able to access the transmission web interface through http://localhost/transmission or https://localhost/transmission. There is an HTTP BASIC AUTH based authentication, use admin as username and admin as password.
+
+And that's it.. steps for the future include moving this setup onto my Raspberry Pi and/or migrating it to Docker-Compose.
