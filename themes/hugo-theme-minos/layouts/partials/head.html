@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Title }}{{ if ne .Title .Site.Title }} // {{ .Site.Title }}{{ end }}</title>
+
+    {{ partial "meta.html" . }}
+    {{ partial "og.html" . }}
+
+    <link href="{{ with .OutputFormats.Get "RSS" }}{{ .Permalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="{{ "webfonts/ptserif/main.css" | absURL }}" rel='stylesheet' type='text/css'>
+    <link href="{{ "webfonts/source-code-pro/main.css" | absURL }}" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
+
+    {{ hugo.Generator }}
+</head>

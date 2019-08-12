@@ -24,7 +24,7 @@ Calling this script will build the PDF-version of the document, in addition I mo
 
 Creating the mobi-File for [Amazon Kindle Direct Publishing](https://kdp.amazon.com) was not that straight-forward. More I less, I used [tex4book](https://ctan.org/pkg/tex4ebook?lang=de), had some problems with the Table-of-Content which were solved by tex4ebook's author with an additional lua script. First of all you need to [download kindlegen from Amazon](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211) and install it. So, I created a new latex document:
 
-~~~ latex
+~~~ tex
 \documentclass{book}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}

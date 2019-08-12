@@ -1,0 +1,33 @@
+<footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; {{ now.Format "2006"}} {{ or .Site.Author.name .Site.Title }}
+            <br />
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos" target="_blank">Minos</a>
+        </div>
+    </div>
+    {{ template "_internal/google_analytics_async.html" . }}
+
+
+    <div id="amzn-assoc-ad-3e30c166-b7cc-42fd-8222-39f5a1647e53"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=3e30c166-b7cc-42fd-8222-39f5a1647e53"></script>
+
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/agate.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script charset="UTF-8"
+	    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/languages/tex.min.js"></script>
+    <script charset="UTF-8"
+	    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/languages/lua.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>

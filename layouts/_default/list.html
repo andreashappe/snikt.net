@@ -1,0 +1,33 @@
+{{ partial "head.html" . }}
+<body>
+<div id="container">
+    {{ partial "header.html" . }}
+    <section id="main" class="outer">
+        <section class="archive">
+
+		{{- $paginator := .Paginate .Data.Pages.ByDate.Reverse 100 }}
+
+  		{{- range $index, $element := $paginator.Pages -}}
+    			{{- $thisYear := $element.Date.Format "2006" }}
+    			{{- $lastElement := $index | add -1 | index $paginator.Pages }}
+    			{{- if or (eq $index 0) ( ne ($lastElement.Date.Format "2006") $thisYear ) }}
+				<h1 class="archive-year">{{ $thisYear }}</h1>
+    			{{- end }}
+
+    			<div class="archive-article">
+      				<span class="archive-article-date">
+        				{{ $element.Date.Format "01-02" }}
+      				</span>
+      				<span class="archive-post-title">
+        				<a href="{{ $element.URL }}" class="archive-article-title">
+          					{{ .Title }}
+        				</a>
+      				</span>
+    			</div>
+  		{{- end -}}
+        </section>
+    </section>
+    {{ partial "footer.html" . }}
+</div>
+</body>
+</html>
