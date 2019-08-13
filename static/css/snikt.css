@@ -21,6 +21,11 @@ nav#main-nav {
 
 .article-entry ul {
 	line-height: 1.7em;
+	margin-left: 40px;
+}
+
+.article-entry ul li {
+	margin-top: 15px;
 }
 
 .article-entry h1 {
