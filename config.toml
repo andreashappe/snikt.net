@@ -23,10 +23,16 @@ googleAnalytics = "UA-2424774-4"
 [author]
   name = "Andreas Happe"
 
-[sitemap]                 # essential                     # 必需
+[sitemap]
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
+
+[[menu.main]]
+  name = "Free Web Security Book (de)"
+  weight = 12
+  identifier = "websec_book"
+  url = "/websec"
 
 [[menu.main]]
   name = "Life"
