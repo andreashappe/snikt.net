@@ -29,10 +29,16 @@ googleAnalytics = "UA-2424774-4"
   filename = "sitemap.xml"
 
 [[menu.main]]
-  name = "Free Web Security Book (de)"
+  name = "Book: Web-Security"
   weight = 12
   identifier = "websec_book"
   url = "/websec"
+
+[[menu.main]]
+  name = "Book: SecOps"
+  weight = 12
+  identifier = "secops_book"
+  url = "/secops"
 
 [[menu.main]]
   name = "Life"
