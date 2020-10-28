@@ -26,9 +26,17 @@ So lets start by removing some of the customized Ubuntu themes and replacing it 
 
 ~~~ bash
 $ sudo apt remove --purge snapd ubuntu-desktop ubuntu-minimal
-$ sudo apt install gnome vim-gtk3
+$ sudo apt install gnome vim-gtk3 adwaita-icon-theme-full
 $ sudo /sbin/reboot # into gnome by chosing "gnome" in the login dialog
-$ apt remove --purge ubuntu-session ubuntu-settings ubuntu-report gnome-shell-extension-ubuntu-dock yaru-theme-gnome-shell yaru-theme-gtk yaru-theme-icon yaru-theme-sound
+$ apt remove --purge ubuntu-session ubuntu-settings ubuntu-report gnome-shell-extension-ubuntu-dock yaru-theme-gnome-shell yaru-theme-gtk yaru-theme-icon yaru-theme-sound netplan.io
+~~~
+
+Use `gnome-tweaks` to switch to the gnome icon theme. To switch to network manager for network management apply [these instructions](https://superuser.com/questions/1429490/unmanaged-network-manager-in-ubuntu):
+
+~~~ bash
+$ sudo sed -i 's/managed=false/managed=true/g' /etc/NetworkManager/NetworkManager.conf
+$ sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
+$ sudo service network-manager restart
 ~~~
 
 ### Replace Ubuntu snap with flatpak
