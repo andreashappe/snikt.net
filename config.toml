@@ -6,7 +6,7 @@ preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
 #theme = "mainroad"
-theme = "hugo-theme-minos"
+#theme = "hugo-theme-minos"
 enableGitInfo = false
 pygmentsOptions = "linenos=table"
 pygmentsCodefences = true
@@ -28,17 +28,13 @@ googleAnalytics = "UA-2424774-4"
   priority = 0.5
   filename = "sitemap.xml"
 
-[[menu.main]]
-  name = "Book: Web-Security"
-  weight = 12
-  identifier = "websec_book"
-  url = "/websec"
+[menu]
 
 [[menu.main]]
-  name = "Book: SecOps"
-  weight = 12
-  identifier = "secops_book"
-  url = "/secops"
+  name = "Books"
+  weight = 10
+  identifier = "books"
+  url = "/categories/books"
 
 [[menu.main]]
   name = "Life"
@@ -56,10 +52,10 @@ googleAnalytics = "UA-2424774-4"
   identifier = "security"
   url = "/categories/security"
 [[menu.main]]
-  name = "Archives"
-  weight = 20
+  name = "Everything"
+  weight = 5
   identifier = "archives"
-  url = "/post/"
+  url = "/"
 #[[menu.main]]
 #  name = "Categories"
 #  weight = 40
@@ -78,6 +74,10 @@ googleAnalytics = "UA-2424774-4"
   moreMeta = false
   highlightInClient = false
   smartToc = true
+
+[taxonomies]
+  categoriy = "categories"
+  tag = "tags"
 
 # See https://gohugo.io/about/hugo-and-gdpr/
 [privacy]

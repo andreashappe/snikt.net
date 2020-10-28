@@ -1,33 +1,33 @@
-<footer id="footer">
-    <div class="outer">
-        <div id="footer-info" class="inner">
-            &copy; {{ now.Format "2006"}} {{ or .Site.Author.name .Site.Title }}
-            <br />
-            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos" target="_blank">Minos</a>
-        </div>
-    </div>
-    {{ template "_internal/google_analytics_async.html" . }}
+<footer class="site-footer mt-5">
+  <div class="container">
+      <div class="row justify-content-md-between">
+          <div class="col-sm-12 col-md-4 mb-4">
+              <h2 class="h5 mb-3">{{ .Site.Title }}</h2>
+              <p>{{.Site.Params.Description}}</p>
+          </div>
+          <div class="col-4 col-md-2 mb-4">
+              <h2 class="h5 mb-3">Menu</h2>
+              <ul class="nav flex-column">
+                  <li class="mb-1"><a href="{{ .Site.BaseURL }}" class="text-secondary">Home</a></li>
+                  {{ range .Site.Menus.main }}
+                  <li class="mb-1"><a href="{{ .URL }}" class="text-secondary">{{ .Name }}</a></li>
+                  {{ end }}
+              </ul>
+          </div>
+      </div>
 
+      <hr/>
 
-    <div id="amzn-assoc-ad-3e30c166-b7cc-42fd-8222-39f5a1647e53"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=3e30c166-b7cc-42fd-8222-39f5a1647e53"></script>
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/agate.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
-    <script charset="UTF-8"
-	    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/languages/tex.min.js"></script>
-    <script charset="UTF-8"
-	    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/languages/lua.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-    <script>
-        document.getElementById('main-nav-toggle').addEventListener('click', function () {
-            var header = document.getElementById('header');
-            if (header.classList.contains('mobile-on')) {
-                header.classList.remove('mobile-on');
-            } else {
-                header.classList.add('mobile-on');
-            }
-        });
-    </script>
+      <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-center">
+          <div class="text-muted mb-3">
+              {{ .Site.Copyright }}
+              <a href="https://10mohi6.tk" class="text-reset">design</a> <a href="https://github.com/10mohi6/hugo-theme-simple-blog" class="text-reset">theme</a></p>
+          </div>
+      </div>
+  </div>
+  <link rel="stylesheet" href="/css/obsidian.css"/>
+  <script src="/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </footer>
+</body>
+</html>

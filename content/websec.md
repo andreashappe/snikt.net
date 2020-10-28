@@ -2,6 +2,7 @@
 title: Einführung in die Web-Security
 comments: true
 date: 2019-08-30
+categories: ["books"]
 ---
 
 Diese Unterlagen entstanden zeitgleich während einer von mir gehaltenen Vorlesung an dem Technikum/FH Wien. Nach dem positiven Feedback der Stundenten wurden die Unterlagen überarbeitet und ich hoffe, dass sie auch von anderen Personen genutzt werden können.

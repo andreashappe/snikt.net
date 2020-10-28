@@ -1,59 +1,37 @@
-.article-title {
-	font-size: 1.5em;
-	font-family: Source Sans Pro,Helvetica Neue,Arial,sans-serif;
-	color: #34495e;
+article img {
+	max-width: 100%;
 }
 
-nav#main-nav {
-	float: right;
+
+main h2.card-title a {
+	color: rgb(64, 71, 78);
+	font-family: 1rem/1.667 'proxima-nova', Helvetica, Arial, sans-serif;
+	font-size: 2rem;
+	font-weight: 500;
+	letter-spacing: 0.2px;
+	line-height: 1.2;
+	margin-bottom: 1.125rem;
 }
 
-.article-entry {
-	#font-family: Source Sans Pro,Helvetica Neue,Arial,sans-serif;
-	font-weight: 400;
-	line-height: 1.7em;
-	color: #34495e;
+main p.card-text {
+	font: 1rem/1.667 'proxima-nova', Helvetica, Arial, sans-serif;
+	color: #40474e;
 }
 
-.article-entry p {
-	line-height: 1.7em;
+.highlight {
+	overflow-x: auto;
+	margin: 20px;
 }
 
-.article-entry ul {
-	line-height: 1.7em;
-	margin-left: 40px;
+table.lntable {
+	min-width: 100%;
 }
 
-.article-entry ul li {
-	margin-top: 15px;
+pre.chroma {
+	margin: 0;
 }
 
-.article-entry h1 {
-	font-size: 1.5em;
-	font-weight: 100;
-	line-height: 1em;
-	margin: 0 0;
+body {
+	text-align: justify;
 }
 
-.article-entry figcaption h4 {
-	font-weight: 100;
-	font-size: 1em;
-	margin: 0.5em 0;
-	text-align: center;
-}
-
-.archive-article-date {
-	display: inline;
-}
-
-.archive {
-	max-width: 550px;
-}
-
-.archive-year {
-	font-size: 1.5em;
-	font-family: Source Sans Pro,Helvetica Neue,Arial,sans-serif;
-	color: #34495e;
-	padding-top: 1em;
-	padding-bottom: 0.5em;
-}
