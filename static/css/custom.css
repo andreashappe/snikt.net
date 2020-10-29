@@ -5,6 +5,17 @@ body {
 	text-align: justify;
 }
 
+article div.highlight {
+	margin: 2em;
+	padding: 0;
+	box-shadow: 5px 5px 5px, rgba(68, 68, 68, 0.6);
+	border-radius: 7px;
+	border: 1px solid #40474e;
+}
+article div.highlight table {
+	padding-top: 1em !important;
+}
+
 article img {
 	max-width: 100%;
 }

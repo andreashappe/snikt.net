@@ -7,14 +7,7 @@
                     <div class="col-lg-8">
                         <article class="pb-2">
                             {{ .Content }}
-                            <p class="mt-5 text-center">
-                                {{ with .Params.tags }}
-                                <span class="text-secondary">Tagged: </span>
-                                {{ end }}
-                                {{ range .Params.tags }}
-                                <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/" class="link-tag text-dark">#{{ . }}</a>
-                                {{ end }}
-                            </p>
+                            {{ template "_internal/disqus.html" . }}
                         </article>
                         <div class="row pt-5 pb-5">
                             <div class="col-6 text-left">

@@ -4,18 +4,23 @@ defaultContentLanguage = "en"
 title = "Andreas Happe"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
-enableEmoji = true
-#theme = "mainroad"
-#theme = "hugo-theme-minos"
 enableGitInfo = false
-pygmentsOptions = "linenos=table"
-pygmentsCodefences = true
-pygmentsUseClasses = true
-pygmentsCodefencesGuessSyntax = true
-hasCJKLanguage = false
 paginate = 10
 disqusShortname = "signalnoise"
-googleAnalytics = "UA-2424774-4"
+
+[markup]
+  [markup.highlight]
+      anchorLineNos = false
+      codeFences = true
+      guessSyntax = true
+      hl_Lines = ""
+      lineAnchors = ""
+      lineNoStart = 1
+      lineNos = true
+      lineNumbersInTable = true
+      #noClasses = true
+      style = "tango"
+      tabWidth = 2
 
 [permalinks]
   post = "blog/:year/:month/:day/:title/"
@@ -66,7 +71,7 @@ googleAnalytics = "UA-2424774-4"
   readmore = true
 
   keywords = ["Andreas Happe", "Happe","Ruby on Rails", "Security", "Tech"]
-  description = "Andreas Happe sometimes blogs about developmen, life or security."
+  description = "Andreas Happe sometimes blogs about development, life or security."
 
   archivePaginate = 50
   showArchiveCount = false
@@ -74,14 +79,3 @@ googleAnalytics = "UA-2424774-4"
   moreMeta = false
   highlightInClient = false
   smartToc = true
-
-[taxonomies]
-  categoriy = "categories"
-  tag = "tags"
-
-# See https://gohugo.io/about/hugo-and-gdpr/
-[privacy]
-  [privacy.googleAnalytics]
-    anonymizeIP = true      # 12.214.31.144 -> 12.214.31.0
-  [privacy.youtube]
-    privacyEnhanced = true
