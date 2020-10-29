@@ -12,18 +12,18 @@
                                 <h2 class="card-title mb-4">
                                     <a class="stretched-link" href="{{ .Permalink }}">{{ .Title }}</a>
                                 </h2>
-                                <p class="small"><span class="text-uppercase">{{.Date.Format "January 2, 2006"}}</span></p>
                                 <p class="card-text">{{ .Summary | plainify | htmlUnescape }}</p>
-                                <p>
+                                <p class="small"><span class="text-uppercase">
+                                    {{.Date.Format "January 2, 2006"}} in
+
                                 {{ range .Params.categories }}
-                                <a href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}/" class="d-inline-block link-cta mb-4 text-uppercase">{{ . }}</a>
+                                <a href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}/" class="text-uppercase">{{ . }}</a>
                                 {{ end }}
-                                    {{ range .Params.tags }}
-                                    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/" class="link-tag text-dark">#{{ . }}</a>
-                                    {{ end }}                              
-                                </p>
+                                </span></p>
                             </div>
                         </div>
+
+
                     </div>
                     {{ end }}
                 </div>
@@ -40,4 +40,5 @@
             </div>
         </div>
     </main>
+
 {{ partial "footer.html" . }}

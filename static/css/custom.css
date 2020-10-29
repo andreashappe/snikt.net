@@ -1,11 +1,54 @@
-.my-lg-6 {
-    margin-top: 5rem!important;
-    margin-bottom: 5rem!important
-  }
-    
-  .bg-skew {
-    position: relative
-  }
+body {
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	color: #40474e;
+	line-height: 1.63;
+	text-align: justify;
+}
+
+article img {
+	max-width: 100%;
+}
+
+article h2 {
+	font-family: 'Nunito Sans', sans-serif;
+	margin-top: 3rem;
+}
+
+article h3 {
+	font-size: 1.0rem;
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+main h1 {
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+main h2.card-title a {
+	font-family: 'Nunito Sans', sans-serif;
+	color: rgb(64, 71, 78);
+	font-size: 2rem;
+	font-weight: 500;
+	letter-spacing: 0.2px;
+	line-height: 1.2;
+	margin-bottom: 1.125rem;
+}
+
+.highlight {
+	overflow-x: auto;
+	margin: 20px;
+}
+
+table.lntable {
+	min-width: 100%;
+}
+
+pre.chroma {
+	margin: 0;
+}
+
+.bg-skew {
+  position: relative
+}
   
   .bg-skew:before {
     content: "";
@@ -40,18 +83,6 @@
   .link-cta:hover {
     color: #006aff;
     text-decoration: none
-  }
-  
-  .link-tag {
-    text-decoration: underline
-  }
-  
-  .link-tag:hover{
-    text-decoration: none
-  }
-  
-  .card-title a {
-    color: #212529
   }
   
   .card-title a:focus, .card-title a:hover {
