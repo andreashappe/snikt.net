@@ -25,7 +25,11 @@
                     </div>
 
                     <div class="col-lg-2 offset-9 position-fixed">
-                        {{ partial "toc.html" . }}
+                        <div class="article-toc">
+                            <h3>Contents</h3>
+                            {{ .TableOfContents }}
+                        </div>
+                        <script src="/js/toc.js"></script>
                     </div>
                 </div>
             </div>

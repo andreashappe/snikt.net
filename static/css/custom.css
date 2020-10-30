@@ -1,3 +1,7 @@
+.hide {
+	  display: none;
+}
+
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	color: #40474e;
