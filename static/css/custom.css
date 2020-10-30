@@ -44,6 +44,10 @@ main h2.card-title a {
 	margin-bottom: 1.125rem;
 }
 
+nav#TableOfContents a.active {
+	color: red;
+}
+
 .highlight {
 	overflow-x: auto;
 	margin: 20px;

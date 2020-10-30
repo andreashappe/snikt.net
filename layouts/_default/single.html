@@ -4,10 +4,10 @@
         <div class="bg-skew bg-skew-light">
             <div class="container">
                 <div class="row justify-content-center">
+
                     <div class="col-lg-8">
-                        <article class="pb-2">
+                        <article class="pb-2 article-entry">
                             {{ .Content }}
-                            {{ template "_internal/disqus.html" . }}
                         </article>
                         <div class="row pt-5 pb-5">
                             <div class="col-6 text-left">
@@ -21,6 +21,11 @@
                             {{ end }}
                             </div>
                         </div>                                                
+                        {{ template "_internal/disqus.html" . }}
+                    </div>
+
+                    <div class="col-lg-2 offset-9 position-fixed">
+                        {{ partial "toc.html" . }}
                     </div>
                 </div>
             </div>
