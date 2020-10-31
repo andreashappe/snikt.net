@@ -1,0 +1,6 @@
+<p class="publish-meta">
+    {{.PublishDate.Format "January 2, 2006"}} in 
+    {{ range .Params.categories }}
+        <a href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}/">{{ . }}</a>
+    {{ end }}
+</p>

@@ -4,25 +4,22 @@
     <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-'
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:wght@900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:wght@900&display=swap" rel="stylesheet"/> 
 
     <link rel="stylesheet" href="{{ $.Site.BaseURL }}css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ $.Site.BaseURL }}css/custom.css">
 
-    {{ partial "meta.html" . }}
-    {{ partial "og.html" . }}
+    <meta name="description" content="{{ .Site.Params.Description }}">
+    <meta name="keywords" content="{{ range .Site.Params.Keywords }}{{ . }},{{ end }}">
+    <meta name="author" content="Andreas Happe">
+
+    <link rel="icon" href="data:,">
 
     <link href="{{ with .OutputFormats.Get "RSS" }}{{ .Permalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W7FHW9FGT"></script>
-    <script>
-                  window.dataLayer = window.dataLayer || [];
-                                    function gtag(){dataLayer.push(arguments);}
-                                    gtag('js', new Date());
-
-                                    gtag('config', 'G-6W7FHW9FGT');
-    </script>
+    <script src="/js/ga.js"></script>
 </head>
+
 <body>

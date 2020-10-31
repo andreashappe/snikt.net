@@ -2,14 +2,15 @@
     <main id="main">
         {{ partial "menu.html" . }}
         <div class="bg-skew bg-skew-light">
-            <div class="container">
+            <div class="container-xl">
                 <div class="row justify-content-center">
 
-                    <div class="col-lg-10">
-                        <article class="pb-2 article-entry">
+                    <!-- content area -->
+                    <div class="col-9">
+                        <article class="article-entry">
                             {{ .Content }}
                         </article>
-                        <div class="row pt-5 pb-5">
+                        <div class="article-navigation row">
                             <div class="col-6 text-left">
                             {{ with .PrevInSection }}
                               <a class="text-reset" href="{{ .Permalink }}">&larr; {{ .Title }}</a>
@@ -24,7 +25,8 @@
                         {{ template "_internal/disqus.html" . }}
                     </div>
 
-                    <div class="col-lg-2">
+                    <!-- toc sidebar -->
+                    <div class="col-2">
                         <div class="article-toc position-fixed">
                             <h3>Contents</h3>
                             {{ .TableOfContents }}

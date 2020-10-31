@@ -1,0 +1,9 @@
+<div class="card card-hover">
+    <div class="card-body">
+        <h2 class="card-title">
+            <a class="stretched-link" href="{{ .Permalink }}">{{ .Title }}</a>
+        </h2>
+        <p class="card-text">{{ .Summary | plainify | htmlUnescape }}</p>
+        {{ partial "article-meta.html" . }}
+    </div>
+</div>
