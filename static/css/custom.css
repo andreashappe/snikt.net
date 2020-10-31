@@ -64,6 +64,7 @@ article div.highlight {
 	border-radius: 7px;
 	border: 1px solid #40474e;
 }
+
 article div.highlight table {
 	padding-top: 1em !important;
 }
@@ -72,21 +73,27 @@ article img {
 	max-width: 100%;
 }
 
-article h2 {
+h1, h2, h3 {
 	font-family: 'Nunito Sans', sans-serif;
+}
+
+article h2 {
 	margin-top: 3rem;
 }
 
 article h3 {
 	font-size: 1.0rem;
-	font-family: 'Nunito Sans', sans-serif;
 }
 
-main h1 {
-	font-family: 'Nunito Sans', sans-serif;
+nav#TableOfContents a.active {
+	color: red;
 }
 
-main h2.card-title a {
+.highlight {
+  overflow-x: auto; /* needed for round corners at border? */
+}
+
+h2.card-title a {
 	font-family: 'Nunito Sans', sans-serif;
 	color: rgb(64, 71, 78);
 	font-size: 2rem;
@@ -96,22 +103,7 @@ main h2.card-title a {
 	margin-bottom: 1.125rem;
 }
 
-nav#TableOfContents a.active {
-	color: red;
-}
-
-.highlight {
-	overflow-x: auto;
-	margin: 20px;
-}
-
-table.lntable {
-	min-width: 100%;
-}
-
-pre.chroma {
-	margin: 0;
-}
+/* background image */
 
 .bg-skew {
   position: relative
@@ -138,6 +130,8 @@ pre.chroma {
     margin-bottom: 48px;
   }
 
+  /* card layout of list page */
+
   .card-body {
     /* pt-5 px-5 pb-4*/
     padding-top: 48px;
@@ -153,28 +147,13 @@ pre.chroma {
     /* mb-4 */
     margin-bottom: 24px;
   }
-  
+
   .card-hover:hover {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
     transform: translateY(-3px)
-  }
-  
-  .link-cta {
-    border-bottom: 2px solid #006aff;
-    color: #343a40;
-    font-size: .875rem;
-    letter-spacing: 1px;
-    padding-bottom: 2px;
-    text-transform: uppercase
-  }
-  
-  .link-cta:hover {
-    color: #006aff;
-    text-decoration: none
   }
   
   .card-title a:focus, .card-title a:hover {
     color: #006aff;
     text-decoration: none
   }
-  
