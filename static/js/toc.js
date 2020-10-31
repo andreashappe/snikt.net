@@ -23,6 +23,11 @@ r(function() {
 
 	function onScroll(){
 	    const headers = document.querySelectorAll('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+
+	    if (headers.length == 0) {
+		    document.querySelector('.article-toc').classList.add("hide");
+	    }
+
 	    const currentScroll = document.documentElement.scrollTop;
 	    const id = getToBeActiveId(headers, currentScroll);
 	    const todo = document.querySelector('#TableOfContents a[href="#' + id + '"]');

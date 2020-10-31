@@ -15,11 +15,11 @@ date: 2013-06-27
 Duplicity supports multiple storage backends, the most interesting for me were Amazon S3 and SSH/SFTP. All my examples will use the SFTP backend as I tend to have SSH servers laying around.
 <!-- more -->
 
-# Using Duplicity
+## Using Duplicity
 
 The best way of evaluating a tool, is using it:
 
-## Setup (on Debian/Ubuntu)
+### Setup (on Debian/Ubuntu)
 
 First of all, install the needed software packages
 
@@ -49,7 +49,7 @@ The created backup files will be signed and encrypted with a GPG key, so if you 
 
 You can use an existing key (that you are using for email communication) or create a wholy new one which does not have any linkage to your email address. Just make sure that you use a large enough key size.
 
-## Do the Backup
+### Do the Backup
 
 With all that information we can now create the initial backup (I'm using `12345678` as my key id):
 
@@ -59,7 +59,7 @@ With all that information we can now create the initial backup (I'm using `12345
 
 This will backup the directory "`stuff-to-backup`" onto the storage server in a directory at "`/home/andy/remote-backup`". The inital backup will take longer as all data is transfered, subsequent backups will only be created as differential backup (ie. only changed data is transfered).
 
-## Query Backup Information
+### Query Backup Information
 
 Sometimes you want to check the contents of your remote backups, to do this you can do:
 
@@ -74,7 +74,7 @@ Sometimes you want to check the contents of your remote backups, to do this you 
  ...
 ~~~
 
-## Restore Files
+### Restore Files
 
 Time to get our files back:
 
@@ -89,7 +89,7 @@ Time to get our files back:
 
 You can use the `-t` parameter to restore older versions of files, i.e. `-t 3D` restores the backup as it was three days ago.
 
-## Maintainence for your Backup
+### Maintainence for your Backup
 
 Backups will grow over time and your online storage might be limited. Thus you might need periodic maintenance for keeping your online storage needs low:
 
@@ -100,7 +100,7 @@ Backups will grow over time and your online storage might be limited. Thus you m
 
 Duplicity does incremental backups: the remove commands will make sure that no backup set that is needed for restoring some later backup will be removed.
 
-# Common Key Management Operations
+## Common Key Management Operations
 
 All backups will be signed and encrypted with your private GPG key. You will loose all data if you loose this key, so better keep care of it!
 
@@ -118,7 +118,7 @@ Let's export the key into a textfile (see [this page](http://linux.koolsolutions
  $ gpg --import-ownertrust ownertrust.txt
 ~~~
 
-# Summary
+## Summary
 
 If you know rsync duplicity is very easy to use. It's easy operation and setup makes it perfect for creating secure backups on the fly, but it is not well suited for synchronizing team data (as there is no conflict management, the later update overwrites conflicting states).
 

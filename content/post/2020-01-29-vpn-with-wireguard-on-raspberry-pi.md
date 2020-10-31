@@ -12,7 +12,7 @@ keywords:
 
 Now that wireguard will be part of the upcoming Linux 5.6 Kernel it's time to see how to best integrate it with my [Raspberry Pi based LTE-Router/Access Point Setup](https://snikt.net/blog/2019/06/22/building-an-lte-access-point-with-a-raspberry-pi/).
 
-# What is my scenario?
+## What is my scenario?
 
 * Raspberry Pi 3 with a LTE hat, using a public IP address. This will be the VPN server (called _edgewalker_ in this post)
 * An Android Phone that should use the VPN for all communication when connected
@@ -22,7 +22,9 @@ Each device connected to the VPN should be able to connect to all other devices,
 
 Given that wired and wireless connections seem to become more insecure over time ([Tailored Access Operations](https://en.wikipedia.org/wiki/Tailored_Access_Operations), [KRACK attacks against WPA2](https://www.krackattacks.com/) or [Dragonblood attacks against WPA3](https://arstechnica.com/information-technology/2019/04/serious-flaws-leave-wpa3-vulnerable-to-hacks-that-steal-wi-fi-passwords/)) I am seriously considering using wireguard for all my devices, regardless in which environment they are running.
 
-# Installing the Software
+## Server Setup
+
+### Installing the Software
 
 WireGuard provides [pre-compiled software packages](https://www.wireguard.com/install/) for most Linux Distributions, Windows and MacOS. Android and iOS applications are provided through the different app stores.
 
@@ -43,7 +45,7 @@ $ sudo apt install wireguard
 
 On the Android Phone, I used the Google App Store to install the [WireGuard VPN Application](https://play.google.com/store/apps/details?id=com.wireguard.android).
 
-# Key Setup
+### Key Setup
 
 Wireguard utilizes a simple private/public key scheme to authenticate VPN peers. You can easily create VPN keys with the following command:
 
@@ -55,7 +57,7 @@ $ wg genkey | tee wg-mobile-private.key |  wg pubkey > wg-mobile-public.key
 
 This gives us three keypairs (and thus six files at all). We will not refer to those files within the configuration files but copy their content (which is just a single line which is the base64-encoded key) in the configuration files.
 
-# Creating a configuration file for the VPN Server (Raspberry Pi)
+### Server Configuration
 
 Configuration was quite easy, I just created the following file at `/etc/wireguard/wg0.conf`:
 
@@ -109,7 +111,9 @@ Now that everything works, we can utilize systemd to automatically start the VPN
 $ sudo systemctl enable wg-quick@wg0.service
 ~~~
 
-# Client configuration on the Laptop
+## Client Setup
+
+### Client configuration on the Laptop
 
 Mostly the Laptop setup consists of creating a matching configuration file in `/etc/wireguard/wg0.conf` on the Laptop:
 
@@ -136,7 +140,7 @@ $ sudo wg-quick up wg0
 $ sudo systemctl enable wg-quick@wg0.service
 ~~~
 
-# Client configuration on the Android Phone
+### Client configuration on the Android Phone
 
 We use a very similar configuration file for our Android phone. We prepare the following file (let's call it `mobile.conf`) on the server through ssh:
 
@@ -163,6 +167,6 @@ $ qrencode -t ansiutf8 < mobile.conf
 
 This outputs an ASCII QR-Code on the console. This code can be scanned from within the Android VPN application and automatically setups the VPN tunnel.
 
-# Conclusion
+## Conclusion
 
 WireGuard's configuration is just magic when compared to similar OpenVPN setups..

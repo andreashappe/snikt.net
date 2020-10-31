@@ -22,20 +22,20 @@ wicked_pdf uses the [wkhtmltopdf](http://code.google.com/p/wkhtmltopdf/) binary 
 
 In this example I'm using wicked_pdf in combination with a rails 3.2 application (thus the need for the custom asset pipeline helpers). The needed steps are:
 
-### Install wkhtmltopdf and the wicked_pdf gem
+## Install wkhtmltopdf and the wicked_pdf gem
 
 wkhtmltopdf will convert the HTML file into a PDF document. The gem depends on wkhtmltopdf version >= 0.9 which sadly isn't provided by Ubuntu 9.10 by default. Manual installation is easy though: download the [static compiled version](http://code.google.com/p/wkhtmltopdf/downloads/list) from the wkhtmltopdf website and place it under `/usr/local/bin`.
 
 Ruby on Rails needs the "wicket_pdf" gem to make use of this binary, just add it to the Gemfile and use bundler.
 
-# Install the wicked_pdf gem:
+### Install the wicked_pdf gem:
 
 ~~~ ruby
  $ echo "gem \"wicked_pdf\"" >> Gemfile
  $ bundle
 ~~~
 
-## Configure wicked_pdf
+### Configure wicked_pdf
 
 Additionally a sample configuration file is needed. While the plugin provides a generate script for this I never acutally persuaded it to work with Rails 3.0. Let’s just copy it form the plugin’s directory into config/initializers.
 
@@ -53,7 +53,7 @@ WICKED_PDF = {
 
 Now we can start with the "real" application logic..
 
-# Add pdf instructions to your controller..
+## Add pdf instructions to your controller..
 
 In this example I’m using the offers#show action within `app/controllers/offers_controller.rb` to render a simple PDF document:
 

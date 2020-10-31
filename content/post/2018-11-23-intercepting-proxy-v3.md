@@ -10,7 +10,7 @@ I've wrote about about creating a simple wireless (WLAN for us right-pondian) ht
 
 Linux' network-manager is perfectly able to create an software access-point with most modern network cards. Alas GNOME's configuration tool only allows for the creation of ad-hoc networks (and switching to KDE for just this is a bit overkill for me) so you have to setup the access point on the command line with *nmtui* or *nmcli*. In this example I will show how to create the interception setup with the latter.
 
-# Identify the Wireless Network Card
+## Identify the Wireless Network Card
 
 First of all we need to identify our wireless network interface that we are going to use. For that you can just call *nmcli* and search it in the detailed list of network interfaces or call *nmcli dev* and search for *wifi* interfaces:
 
@@ -25,7 +25,7 @@ As my laptop has only a single wireless card, I store this in a variable:
 $ capturing_interface=$(nmcli dev | grep wifi | cut -f 1 -d \ )
 ~~~
 
-# Enable the Software Access Point
+## Enable the Software Access Point
 
 Now we're using *nmcli* to create a new software access point with ssid "interceptingAP" (so that hopefully noone connects accidentially) and with an password of "trustno1". Fun fact: always create your capturing network with passwords, otherwise innocent bystanders will connect. Or so I hear.
 
@@ -37,7 +37,7 @@ $ sudo nmcli dev wifi hotspot ifname $capturing_interface \
 Device 'wlp61s0' successfully activated with '97b03a23-5470-4b09-9f2a-d20b05c4b111'.
 ~~~
 
-# Setup the Listening Proxy
+## Setup the Listening Proxy
 
 Now we can setup our proxy software. Last time I was using BURP (which I still prefer). If you're using BURP there are some configuration steps that you need to take care of (all in the proxy tab):
 
@@ -54,7 +54,7 @@ Start the proxy:
 $ mitmproxy --mode transparent --showhost
 ~~~
 
-# Forward Http(s) Traffic
+## Forward Http(s) Traffic
 
 Almost done, now we just need some iptables rules to transparently forward potential web traffic to our intercepting proxy software. this time we will forward ports 80 and 443 for IPv4 and IPv6:
 

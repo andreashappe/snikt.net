@@ -29,7 +29,7 @@ ii  virtinst                            0.600.4-2ubuntu2.1                  all 
 
 Storage-wise I'm using a LVM volume group called 'vg0' (which was imported into the libvirt configuration).
 
-# How to use virt-install
+## How to use virt-install
 
 To setup a new guest machine I'm using the following command:
 

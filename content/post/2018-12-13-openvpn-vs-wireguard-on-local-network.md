@@ -6,7 +6,7 @@ categories: ["tech", "security"]
 
 [Wireguard](https://www.wireguard.com/) is recently making a splash as human-configurable low-overhead alternative to [OpenVPN](https://openvpn.net/) and IPSec. As some privacy-centric VPN providers are planning to support it (e.g., [PIA](https://www.privateinternetaccess.com/pages/buy-vpn/SNIKT001)) or already have a beta running (e.g., [IVPN, as tested by Ars Technica](https://arstechnica.com/gadgets/2018/12/testing-wireguard-with-an-early-adopter-vpn-service/)) it was time for me to look into it.
 
-# The Setup
+## The Setup
 
 To get a better feeling about the used technology I directly connected my laptop to my desktop (gigabit Ethernet with no switch/router in between) and setup OpenVPN with a minimalist configuration as well as with a more realistic TLS-configuration. I took some bandwidth/latency measurements with [iperf](https://iperf.fr/) and [qperf](https://access.redhat.com/solutions/2122681) and compared those to a minimal Wireguard setup.
 
@@ -33,7 +33,7 @@ tcp_bw:
     bw  =  840 Mb/sec
 ~~~
 
-# Minimal OpenVPN Configuration (shared secret)
+## Minimal OpenVPN Configuration (shared secret)
 
 This is a setup based upon [the OpenVPN documentation](roughly based upon https://openvpn.net/community-resources/static-key-mini-howto/): the two computers are connected with a minimal VPN configuration and a shared secret key is used (this key has to be copied between those two computers beforehand). This uses a 2048 bit key, no TLS and BF-CBC as cipher (blowfish). The shared secret (stored in the file `static.key`) was created with the command `$ OpenVPN --genkey --secret static.key` and afterwards copied with scp.
 
@@ -77,14 +77,14 @@ Wed Dec 12 18:47:04 2018 Initialization Sequence Completed
 
 And with that we were able to measure the bandwidth and the performance. Please notice that it took around seven seconds to get the tunnel established.
 
-# OpenVPN with TLS and AES-GCM
+## OpenVPN with TLS and AES-GCM
 
 The next step was to create a realistic public-/private-key based OpenVPN setup. Compared to the minimalist setup there were the following differences:
 
 * OpenVPN uses a data and a control channel. The control channel can be configured using the `tls-cipher` directive and a `chacha20-poly1305` cipher was used for better comparison with Wireguard (which uses the same cipher). For the data channel neither Fedora nor Ubuntu provided `chacha20-poly1305` so `AES-256-GCM` was configured using the `cipher` configuration option. AES-GCM should perform very fast as OpenSSL would be using the Intel hardware support for this cipher/block-mode.
 * a 4096 bit DH parameter was created using `openssl dhparam -out dh4096.pem 4096`
 
-## easy-rsa (public/private key setup)
+### easy-rsa (public/private key setup)
 
 Sadly for the public-/private-key setup we need some sort of CA (certificate issuer). I've taken the easy way out and used [easy-rsa](https://help.ubuntu.com/lts/serverguide/openvpn.html.en).
 
@@ -105,7 +105,7 @@ $ ./easyrsa build-client-full client
 
 Then the relevant files were copied to client and server. For the server-side we need `ca.crt`, `dh4096.pem`, `server.key`, `server.crt`. For the client we need `ca.crt`, `client.key` and `client.crt`.
 
-## Configuration
+### Configuration
 
 The generated keys/certificates were thus configured on the server side:
 
@@ -161,13 +161,13 @@ Wed Dec 12 19:20:55 2018 [server] Peer Connection Initiated with [AF_INET]192.16
 Wed Dec 12 19:20:57 2018 Initialization Sequence Completed
 ~~~
 
-# Wireguard
+## Wireguard
 
 Wireguard is configured using both the linux `ip` as well as the Wireguard `wg` binary. To create the setup two private-/public-keypairs as well as a shared preshared key were created. The public key is a short BASE64-encoded value (e..g, `1ykxqzUAXcNK0VnzUf/4kf9Frt/CU5bc2h1m6uPf6yc=` while the pre-shared key is contained in a normal text file).
 
 Wireguard itself used `Chacha20-Poly1305`. This is a software algorithm with almost no hardware acceleration support. While the lack of hardware support hurts on x86_64 platforms the algorithm's good software performance is one of the reasons that Alphabet is using this on ARM-Platforms (i.e., Android) which until recently were lacking (AES-)GCM hardware support.
 
-## Key generation
+### Key generation
 
 I created a private/public-keypair on both clients (just outputting this for one side, execute this on both clients):
 
@@ -182,7 +182,7 @@ Also I've created the preshared key (and copied that from one client to the othe
 $ wg genpsk > psk.key
 ~~~
 
-## Configuration
+### Configuration
 
 As mentioned before, `wireguard` can be configured using just the command line, this was done on client 1:
 
@@ -235,7 +235,7 @@ I cannot really tell how fast the VPN tunnel was established as it was almost in
 
 And with that I was able to gain some performance numbers.
 
-# Results
+## Results
 
 And now, for the performance numbers:
 
