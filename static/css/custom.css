@@ -2,6 +2,12 @@
 	  display: none;
 }
 
+@media (max-width: 991.98px) {
+	div.article-toc {
+		display: none;
+	}
+}
+
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	color: #40474e;

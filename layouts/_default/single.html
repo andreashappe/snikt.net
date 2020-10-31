@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="row justify-content-center">
 
-                    <div class="col-lg-8">
+                    <div class="col-lg-10">
                         <article class="pb-2 article-entry">
                             {{ .Content }}
                         </article>
@@ -24,8 +24,8 @@
                         {{ template "_internal/disqus.html" . }}
                     </div>
 
-                    <div class="col-lg-2 offset-9 position-fixed">
-                        <div class="article-toc">
+                    <div class="col-lg-2">
+                        <div class="article-toc position-fixed">
                             <h3>Contents</h3>
                             {{ .TableOfContents }}
                         </div>
