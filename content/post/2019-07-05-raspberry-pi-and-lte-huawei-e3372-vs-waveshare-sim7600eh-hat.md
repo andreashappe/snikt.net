@@ -19,7 +19,7 @@ My [Huawei E3372](https://amzn.to/2xvgRls) USB LTE modem works find but only imp
 
 After some research I bought a [Waveshare SIM7600E-H hat](https://www.waveshare.com/wiki/SIM7600E-H_4G_HAT). This module is just put on top of the Raspberry (at least that's what I thought) and thus would make for a more compact and professional looking setup. When I initially setup this combination I found out, that the communication is actually performed through an attached USB cable, so the setup is not as clean as I hoped that it would be:
 
-{{< figure src="/assets/2019/setup_sim7600.jpg" title="Raspberry Pi 3b+ with Waveshare SIM7600E-H" >}}
+{{< figure class="figure" src="/assets/2019/setup_sim7600.jpg" title="Raspberry Pi 3b+ with Waveshare SIM7600E-H" >}}
 
 After doing [some research](https://www.raspberrypi.org/forums/viewtopic.php?t=224355), I was able to configure the LTE modem, more or less using the following script stored in `/usr/local/bin/start_lte.sh`:
 

@@ -37,16 +37,18 @@ Then I've got all the components and found out some new stuff.
 
 The main problem is the mainboard - cpu cooler - graphics card - memory combination. I wanted to go with a passive SilverStone CPU cooler, this introduces a rather large heat sink to the equation. Before ordering the components I found out that my first choice of Kingston Predator memory modules would clash with the cooler: the height of the memory modules would be 5mm to large to fit under the heat sink -- so I switched to cheaper Kingston HyperX red modules.
 
-![](/assets/itx-desktop/problem_with_cooler.jpg) I've read [reviews of the case and cooler combination](http://www.silentpcreview.com/Silverstone_SG05_SG06) before I ordered the components. Alas I ordered another motherboard. In contrast to the reviewed Zotac motherboard I've ordered an ASRock one. While the motherboard is good the placement of the CPU socket in relationship to the graphic card port (PCI express port) is suboptimal. Normally the chipset is situated between those two so there's ample space for cpu coolers. Not so on this board: when mounting the heat sink it is situated directly above the pci express port and blocks it for usage with any graphics card. So I had to switch from passive cooling to the stock Intel CPU cooler for now.
+![](/assets/itx-desktop/problem_with_cooler.jpg)
+
+I've read [reviews of the case and cooler combination](http://www.silentpcreview.com/Silverstone_SG05_SG06) before I ordered the components. Alas I ordered another motherboard. In contrast to the reviewed Zotac motherboard I've ordered an ASRock one. While the motherboard is good the placement of the CPU socket in relationship to the graphic card port (PCI express port) is suboptimal. Normally the chipset is situated between those two so there's ample space for cpu coolers. Not so on this board: when mounting the heat sink it is situated directly above the pci express port and blocks it for usage with any graphics card. So I had to switch from passive cooling to the stock Intel CPU cooler for now.
 
 ### Optional mSATA card and Optical Drive
 
 On further inspection I found a mSATA port on the backside of the mainboard. Storage sizes really got small recently. Needless to say that I've gone out and bought a 64Gbyte Transcend mSATA SSD for my Linux system drive.
 My storage configuration itself is sub-optimal. The mSATA board only supports SATAII instead of the SATA 6G that the mSATA card would support (which is not really as much of an issue as this limits the SATA throughput to a merely 300MByte/sec). Ironically I'm using my old OCZ Vertex 2 SSD which only supports SATA2 on a normal SATA 6G port on the front side of the motherboard.
 
-<br/>
+![](/assets/itx-desktop/evolution_of_storage.jpg)
 
-![](/assets/itx-desktop/evolution_of_storage.jpg) <br/>Storage got smaller, from left to right: 3.5" hard drive (1TB), 2.5" SSD (240GB), mSATA SSD (64GB).<br/><br/><br/>
+Storage got smaller, from left to right: 3.5" hard drive (1TB), 2.5" SSD (240GB), mSATA SSD (64GB).
 
 Overall the case supports multiple storage options:
 

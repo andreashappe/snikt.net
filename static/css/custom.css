@@ -71,6 +71,21 @@ article div.highlight table {
 
 article img {
 	max-width: 100%;
+  height: auto;
+}
+
+figure {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+figure figcaption {
+  text-align: center;
+  padding-top: 6px;
+}
+
+figure figcaption h4 {
+  font-size: 90%;
 }
 
 h1, h2, h3 {

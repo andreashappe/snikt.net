@@ -24,7 +24,7 @@ This setup should be fail-secure: if the VPN tunnel gets disconnected, the bitto
 
 I did some searching around and found [dperson's docker images](2019-06-30-secure-downloads-with-raspberry-pi-openvpn-pia-docker-and-transmission-web.md) which nicely provide all needed functionality. Sadly the inital setup did not work as smooth as I assumed, so I wrote my setup procedure up.
 
-# Setup OpenVPN image
+## Setup OpenVPN image
 
 The openvpn-client docker image does support [using an user-supplied configuration file](https://github.com/dperson/openvpn-client/issues/141), so I went with that. For testing purposes I've created /tmp/vpn and adapted an PIA openvpn config file to use file-based authentication (change `auth-user-pass` to `auth-user-pass login.conf` in the PIA configuration file). this file must be named `vpn.conf` and be placed within the /tmp/vpn directory (on the host):
 
@@ -141,7 +141,7 @@ $ sudo docker run -it --cap-add=NET_ADMIN --device /dev/net/tun --name vpn \
 
 We pass in the vpn-diretory and use a containter option (`-f ""`) to configure it's firewall to block all traffic if the VPN is not opened (to prevent stray communications from happening).
 
-# Test the VPN tunnel through a minimal image
+## Test the VPN tunnel through a minimal image
 
 You should never trust your configuration without testing it.. so let's fire up an alpine linux container, connect it to the internet through the VPN and retrieve our external IP-Adress (which should be different to our Host computer's external IP address):
 
@@ -153,7 +153,7 @@ Connecting to whatismyip.akamai.com (2.20.189.18:80)
 185.220.70.151/ # 
 ~~~
 
-# Use transmission-web images (and an nginx to allow for web access to the container)
+## Use transmission-web images (and an nginx to allow for web access to the container)
 
 Now we can start-up additional images for transmission and a web-server for controlling it. We will use the vpn-network configured through the openvpn-client image:
 
