@@ -57,6 +57,10 @@ body {
 	text-align: justify;
 }
 
+article.article-entry {
+	font-family: libre baskerville, Libre, Georgia, Times, serif;
+}
+
 article div.highlight {
 	margin: 2em;
 	padding: 0;
