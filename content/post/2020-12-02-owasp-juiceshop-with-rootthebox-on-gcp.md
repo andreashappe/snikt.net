@@ -31,7 +31,7 @@ After some research I settled on a very simple setup:
 - [Root-the-Box](https://github.com/moloch--/RootTheBox) hosted on a GCP virtual machine as game server
 - [MultiJuicer](https://github.com/iteratec/multi-juicer) on a GCP-hosted Kubernetes cluster to spawn a separate JuiceShop CTF container for each player/team.
 
-Following the recommendation by MultiJuicer I should expect to use 5 CPU-cores as well as around 5 Gigabyte of memory for the Kubernetes cluster for my approx. 20 containers. To make sure we're on the safe side, let's double the available memory..
+Following the recommendation by MultiJuicer I should expect to use 5 CPU-cores as well as around 5 Gigabyte of memory for the Kubernetes cluster for my approx. 10 containers. To make sure we're on the safe side, let's double the available memory..
 
 ## Create CTF Configuration
 
@@ -111,7 +111,7 @@ Now that we have the game server we need to prepare our players' gaming setup.
 
 Let's start by creating a new Kubernetes cluster that will hold/spawn the players' containers.
 
-To do that, go to the GCP and navigate to Computing -> Kubernetes Engine -> Cluster and click the "create new cluster" button. Chose a nearby zone and create the cluster. The default cluster consists of three e2-medium cluster nodes (each containing two vCPUs and four Gigabyte of memory). This should be enough to host 40-50 parallel containers (= teams or players) while costing around $4-5 per CTF-day.
+To do that, go to the GCP and navigate to Computing -> Kubernetes Engine -> Cluster and click the "create new cluster" button. Chose a nearby zone and create the cluster. The default cluster consists of three e2-medium cluster nodes (each containing two vCPUs and four Gigabyte of memory). I've added two more, this should be enough to host 10 parallel containers (= teams) while costing around $4-5 per CTF-day.
 
 To setup the CTF container connect through [Google Cloud Shell](https://cloud.google.com/shell) (click on the "connect" button next to the newly created cluster in the cluster view). In the newly connected console check that the cluster is running and deploy the infrastructure for the CTF infrastructure:
 
@@ -128,7 +128,7 @@ $ kubectl get secrets juice-balancer-secret -o=jsonpath='{.data.adminPassword}' 
 What did I change in the values.yaml:
 
 - change "nodeEnv" from "multi-juicer" to "ctf"
-- change "maxInstances" from "10" to "50"
+- change "maxInstances" from "10" to "20"
 - change "ctfKey" to the key used during running juiceshop-ctf-cli ("trustno1" in our example)
 
 ### Export the CTF infrastructure to the public internet
@@ -156,6 +156,6 @@ In addition delete your cluster as well as the virtual instances (cluster nodes 
 
 This setup works as intended but if I would redo it I'd change the following:
 
-- switch the cluster nodes from e2-medium to e2-small. This is cheaper as base setup, I can always dynamically add more nodes to the cluster anyways.
+- switch the cluster nodes from e2-medium to e2-small. This is cheaper as base setup, I can always dynamically add more nodes to the cluster anyways --- as my containers seem to be mostly CPU-limited this should provide more virtual machines..
 - setup SSL certificates and offer everything over HTTPS
 - instead of using a separate e2-small instance for the game-server, deploy the game-server into the Kubernetes cluster itself

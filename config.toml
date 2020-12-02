@@ -1,7 +1,7 @@
 baseURL = "https://snikt.net/"
 languageCode = "en"
 defaultContentLanguage = "en"
-title = "Andreas Happe"
+siteTitle = "Andreas Happe"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableGitInfo = false
