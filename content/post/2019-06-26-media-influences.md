@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Books and influences of mine"
-categories: ["tech"]
+categories: ["life", "tech", "books"]
 date: 2019-06-26
 keywords:
 - influences

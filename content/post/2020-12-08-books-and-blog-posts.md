@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Book Updates and Blog Posts.."
-categories: ["life"]
+categories: ["life", "books"]
 date: 2020-12-08
 keywords:
 - books
