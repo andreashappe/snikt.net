@@ -17,7 +17,7 @@ Those ideas are mostly language agnostic and should be feasible for most compani
 
 Why are there no concrete coding/source-code guidelines in there? They would make sense but there's a huge risk of [bike-shedding](https://en.wikipedia.org/wiki/Law_of_triviality). And that's something I'd like to avoid.
 
-# source code management
+## source code management
 
 Source code is the most vital output of a development team so it feels like a good place to start. To start with an easy one: there must be a single source of truth. If there is a question about which source code was part of a release, the source code repository can be queried and it's answer is definite.
 
@@ -33,13 +33,13 @@ I think by now we can assume that [git](https://en.wikipedia.org/wiki/Git) will 
 
 Infrastructure-wise this could be a [github](https://github.com), [gitlab](https://gitlab.com) or [bitbucket](https://bitbucket.com) account. Or you go the self-hosted route with [gitlab](https://gitlab.com) or [gitea](https://gitea.io).
 
-# Infrastructure-as-code
+## Infrastructure-as-code
 
 System configuration should be done automatically through dedicated deployment tools or through scripts. This has the benefit that all those configuration scripts can be checked-in into the source code repository as code. This allows versioning and documents the expected configuration state.
 
 The buzzword for this is "infrastructure-as-code". The chosen technology is not as important as getting into the habit of doing it. Feel free to use [capistrano](https://capistranorb.com/), [puppet](https://puppet.com/), [chef](https://chef.io), [ansible](https://www.ansible.com), [helm](https://helm.sh/), [terraform](https://www.terraform.io/) or even simple bash/python setup scripts as long as all changes to the target system are done automatically through those.
 
-# Threat-Model-ish
+## Threat-Model-ish
 
 A [Thread Model](https://owasp.org/www-community/Threat_Modeling) is a formal way of analyzing tthe security requirements and controls suitable for a project. While they provide big security benefits but have some publicity problems (as they could degenerate into a massive waste of paper).
 
@@ -54,7 +54,7 @@ What should the text file include?
 - security scope: what is under our influence and what not? For example, if we assume that our application server has access to a hardened PostgreSQL database this should be written down here. If we assume that there's a reverse-proxy providing HTTPS this should be written down, etc.
 - security assumptions: as developers we are always making some implicit assumptions. This is the place to write them down. For example, my application might use AES-GCM-256 for encryption as this is the current-state-of-the-art: in that case, write this down (bonus points if you add the date when this assumption was taken)
 
-# Perform dependency-management
+## Perform dependency-management
 
 I hope you're not reinventing the wheel but instead are using proven software libraries and frameworks. Those are (hopefully) regularly tested and reviewed and through that you get access to high-quality functionality instead of potentially adding security bugs to your own re-implementation. There's also a backside: if you're using frameworks and libraries you also must keep them up to date and integrate all their updates in a timely manner.
 
@@ -65,7 +65,7 @@ To do that, you must be aware of new updates (and their security relevance) in t
 
 Both tools scratch different itches: dependency-check is valuable directly during development while dependency-track is more suited for long-term maintenance. In doubt, use both.
 
-# Environments
+## Environments
 
 During development your software will have to be setup within different environments:
 
@@ -77,7 +77,7 @@ This is were all the automation (see "Infrastructure-as-code") will come in hand
 
 Development and Staging should not use "real data" for testing but some sort of fake/synthetic data. Sadly that data is hard to come by and I have seldom seen development groups that are able to use fake data only.
 
-# Be aware of your company's culture
+## Be aware of your company's culture
 
 Even if you prepare for everything, security errors will happen. In that case, the long-term goal should be to learn the most out of them (so that one concrete error will not resurface or happen in another development group). The best way to achieve this, is to talk about findings and errors. This is harder than it sounds, but the alternative is not feasible: if your coworkers are ashamed or afraid about talking their errors, you've already lost as a company.
 
