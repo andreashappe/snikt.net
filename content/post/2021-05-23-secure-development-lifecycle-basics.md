@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Secure Software Development Lifecycle Basics"
-categories: ["Security"]
+categories: ["Security", "AppSec"]
 date: 2021-05-23
 keywords:
 - Security
