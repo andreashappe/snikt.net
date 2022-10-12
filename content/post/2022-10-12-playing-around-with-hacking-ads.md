@@ -144,3 +144,13 @@ $ crackmapexec smb <server ip range> -d <domain> -u <user> -H <hash> -M lsassy
 ~~~
 
 As I had approx. a dozen passwords, three full domain admins and.. stuff. I stopped here.
+
+## Further Notes
+
+As you might have recognized, I am not an AD-hacker, I mostly googled stuff. The following sites were quite helpfull:
+
+- [HackTricks](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-network/spoofing-llmnr-nbt-ns-mdns-dns-and-wpad-and-relay-attacks)
+- [Xedex: Internal Pentest](https://xedex.gitbook.io/internalpentest/internal-pentest/active-directory/initial-attack-vectors/llmnr-nbt-ns-poisoning/smb-relay)
+- [Hacking Articles: Lateral Movement](https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/)
+- [The Hacker Recipes](https://www.thehacker.recipes/ad/movement/credentials/dumping/sam-and-lsa-secrets)
+- [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/windows-systems/exploitation/crackmapexec/)
