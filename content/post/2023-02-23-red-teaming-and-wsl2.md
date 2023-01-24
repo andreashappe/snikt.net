@@ -2,7 +2,7 @@
 layout: post
 title: "Using WSL2 to stay undercover (red-teaming?)"
 categories: ["Security"]
-date: 2023-01-23
+date: 2023-02-23
 keywords:
 - windows
 - security
