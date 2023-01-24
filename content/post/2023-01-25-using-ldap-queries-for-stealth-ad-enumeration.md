@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Using LDAP queries for stealth Active Directory Enumeration"
+title: "Active Directory: Using LDAP Queries for Stealthy Enumeration"
 categories: ["Security"]
-date: 2023-02-23
+date: 2023-01-25
 keywords:
 - windows
 - security
