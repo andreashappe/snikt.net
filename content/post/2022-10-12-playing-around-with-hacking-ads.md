@@ -13,7 +13,7 @@ keywords:
 - ntlmrelayx
 ---
 
-So a customer of mine thought about ordering a Red Team Assessment and wanted me to go through their local network beforehands --- no need to make it too easy for the red teamers. The customer's network was a typical windows network, dated but kept up to date by two admins. Microsoft Defender was rolled out at all clients, and one some servers. A laptop with Kali Linux was connected to the local network, this was my starting point.
+So a customer of mine thought about ordering a Red Team Assessment and wanted me to go through their local network beforehands --- no need to make it too easy for the red teamers. The customer's network was a typical windows network, dated but kept up to date by two admins. Microsoft Defender was rolled out at all clients, and on some servers. A laptop with Kali Linux was connected to the local network, this was my starting point.
 
 So the meta-data for this project were:
 
@@ -38,16 +38,16 @@ The initial update failed as some perimeter firewall blocked access to the green
 
 Please write down the admin password which will be output on the console
 
-The initial setup still took more than one hour. While not being problematic at all, a problem was that the softwar did not give any reasonable feedback. It just looked as if the setup failed and I wouldn't be able to connect to localhost:9392. When looking at the htop output I saw that gasd (greenbone) and the postgresql were using almost 100% of the available CPU resources, so I just waited until that CPU storm died down and restarted the scanner.
+The initial setup still took more than one hour. While not being problematic at all, a problem was that the software did not give any reasonable feedback. It just looked as if the setup failed and I wouldn't be able to connect to localhost:9392. When looking at the htop output I saw that gasd (greenbone) and the postgresql were using almost 100% of the available CPU resources, so I just waited until that CPU storm died down and restarted the scanner.
 
 Another problem was that the web-interface was bound to localhost and there seemed no easy one-step configuration option to switch this to 0.0.0.0. As this was a throw away setup, I just SSH port-forwarded port 9392 (over the wireguard connection) to my local desktop and accessed the scanner over this.
 
-Started the scan, took around 24h to complete (customer hat four /24 networks). Afterwards I exported all the scans as xml and csv files for analysis. The Greenbone web interface is just too ugly.
+Started the scan, took around 24h to complete (customer had four /24 networks). Afterwards I exported all the scans as xml and csv files for analysis. The Greenbone web interface is just too ugly.
 
 In addition I started a slow but thorough nmap scan:
 
 ~~~ sh
-$ nmap -A -p- -Pn -oA output_directory <ip-range>
+$ nmap -T 4 -A -p- -Pn -oA output_directory <ip-range>
 ~~~
 
 This took around two days to finish.
