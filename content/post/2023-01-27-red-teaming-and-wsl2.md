@@ -2,7 +2,7 @@
 layout: post
 title: "Using WSL2 to hide from EDR"
 categories: ["Security"]
-date: 2023-02-23
+date: 2023-01-27
 keywords:
 - windows
 - security
