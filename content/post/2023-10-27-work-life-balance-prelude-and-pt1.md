@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Work/Life Balance: Prelude and Experiments pt. 1"
+title: "Work/Life Balance, pt. 1: Prelude and Experiments"
 categories: ["Life"]
 date: 2023-10-27
 keywords:
