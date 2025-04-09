@@ -257,8 +257,6 @@ server {
 
 ## Next Steps
 
-And that's it for now. With this setup we have now a little home-server that uses an encrypted drive for data, is accessible from everywhere through the overlay network, uses a privacy-enhancing VPN when connecting to the outside world, and is prepared to host both Virtual Machines as well as Containers.
+And that's it for now. With this setup we have now a little home-server that uses an encrypted drive for data, is accessible from everywhere through the overlay network, uses a privacy-enhancing VPN when connecting to the outside world, and is prepared to host both Virtual Machines as well as Containers:
 
-(will be converted to 'real' links if I ever get to writing them)
-
-- Services used on this device
+- [Services used on this device](https://snikt.net/blog/2025/04/09/homeserver-services-pt.-1/): gitea, audiobookshelf and tt-rss
