@@ -109,7 +109,7 @@ services:
 
 After the intial start, a new configuration file is created at `/media/data/containers/gitea/data/gitea/conf/app.ini`. You can edit this file to change the configuration of gitea. The most important settings changes are:
 
-```
+```ini
 [server]
 ...
 ROOT_URL = https://meltingpot.social/gitea
