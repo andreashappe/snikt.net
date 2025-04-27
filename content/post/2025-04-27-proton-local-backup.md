@@ -10,7 +10,7 @@ keywords:
 - proton mail
 - proton drive
 ---
-By now, I am using Proton Drive for cloud data storage and Proton Mail as my primary mail service. While I trust Proton with my data, I do not want to rely on them completely. As I have [a small server](https://snikt.net/blog/2025/04/05/building-a-little-home-server-with-linux-tailscale-protonvpn-docker-compose-and-vm-support/) standing around at home, it's kinda obvious to use it for automatically performing backups of my cloud data.
+By now, I am using [Proton Drive](https://go.getproton.me/SH1Yc) for cloud data storage and [Proton Mail](https://go.getproton.me/SH1Yd) as my primary mail service. While I trust Proton with my data, I do not want to rely on them completely. As I have [a small server](https://snikt.net/blog/2025/04/05/building-a-little-home-server-with-linux-tailscale-protonvpn-docker-compose-and-vm-support/) standing around at home, it's kinda obvious to use it for automatically performing backups of my cloud data.
 
 I try to use [systemd](https://systemd.io/) services and timers for this, as this makes monitoring and logging quite easy.
 
