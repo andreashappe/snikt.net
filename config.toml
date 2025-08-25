@@ -5,8 +5,9 @@ siteTitle = "Andreas Happe"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableGitInfo = false
-paginate = 10
+# paginate = 10
 disqusShortname = "signalnoise"
+theme = ["PaperMod"]
 
 [markup]
   [markup.highlight]
@@ -25,9 +26,6 @@ disqusShortname = "signalnoise"
 [permalinks]
   post = "blog/:year/:month/:day/:title/"
 
-[author]
-  name = "Andreas Happe"
-
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
@@ -36,36 +34,20 @@ disqusShortname = "signalnoise"
 [menu]
 
 [[menu.main]]
-  name = "Books"
-  weight = 10
-  identifier = "books"
-  url = "/categories/books"
-
-[[menu.main]]
-  name = "Life"
-  weight = 12
-  identifier = "life"
-  url = "/categories/life"
-[[menu.main]]
-  name = "Tech"
-  weight = 12
-  identifier = "tech"
-  url = "/categories/tech"
-[[menu.main]]
-  name = "Security"
-  weight = 12
-  identifier = "security"
-  url = "/categories/security"
-[[menu.main]]
-  name = "Everything"
+  name = "Blog"
   weight = 5
-  identifier = "archives"
+  identifier = "blog"
   url = "/"
-#[[menu.main]]
-#  name = "Categories"
-#  weight = 40
-#  identifier = "categories"
-#  url = "/categories/"
+[[menu.main]]
+  name = "Archives"
+  weight = 10
+  identifier = "archives"
+  url = "/archives"
+[[menu.main]]
+  name = "Categories"
+  weight = 20
+  identifier = "categories"
+  url = "/categories/"
 
 [params]
   readmore = true
@@ -79,3 +61,7 @@ disqusShortname = "signalnoise"
   moreMeta = false
   highlightInClient = false
   smartToc = true
+
+[[author]]
+  name = "Andreas Happe"
+
