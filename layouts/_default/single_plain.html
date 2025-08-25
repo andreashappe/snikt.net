@@ -4,6 +4,11 @@
 .main {
     max-width: calc(var(--nav-width) + var(--gap) * 2);
 }
+
+.post-content {
+    display: grid;
+    grid-template-columns: auto 400px;
+}
 </style>
 
 <article class="post-single">
@@ -15,7 +20,11 @@
 
   {{- if .Content }}
   <div class="post-content">
-	  {{ .Content }}
+	  <div>
+	  	{{ .Content }}
+	  </div>
+	  <div>
+          </div>
   </div>
   {{- end }}
 </article>
