@@ -1,0 +1,82 @@
+baseURL: "https://snikt.net/"
+title: "Andreas Happe"
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+pagination:
+  pagerSize: 10
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+permalinks:
+  post: "blog/:year/:month/:day/:title/"
+
+params:
+  env: production
+  defaultTheme: light
+  disableThemeToggle: false
+  author: "Andreas Happe"
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: true
+  disableScrollToTop: false
+  comments: true
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.6
+    minMatchCharLength: 3
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+services:
+  disqus:
+    shortname: "signalnoise"
+
+#languageCode = "en"
+#defaultContentLanguage = "en"
+#preserveTaxonomyNames = true
+#enableRobotsTXT = true
+#enableGitInfo = false
+#disqusShortname = "signalnoise"
+
+menu:
+  main:
+    - identifier: "blog"
+      name: "Blog"
+      weight: 5
+      url: "/"
+    - identifier: "search"
+      name: "Search"
+      weight: 7 
+      url: "/search/"
+    - identifier: "archives"
+      name: "Archives"
+      weight: 10
+      url: "/archives"
+    - identifier: "categories"
+      name: "Categories"
+      weight: 20
+      url: "/categories/" 
