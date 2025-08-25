@@ -70,6 +70,10 @@ services:
 
 menu:
   main:
+    - identifier: "about"
+      name: 'About'
+      weight: 1
+      url: '/about'
     - identifier: "blog"
       name: "Blog"
       weight: 5
