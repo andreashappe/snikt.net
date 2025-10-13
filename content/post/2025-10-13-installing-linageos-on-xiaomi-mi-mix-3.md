@@ -16,7 +16,7 @@ Basic steps to update my installation were straight-forward:
 
 1. Overall, follow the official [LineageOS installation guide](https://wiki.lineageos.org/devices/perseus/install).
 2. As I was not able to determine the current firmware versions on the phone, I performed the recommended [firmware update](https://wiki.lineageos.org/devices/perseus/fw_update/) first.
-3. During installation, I also installed the suggested [Mind-the-GApps](https://wiki.lineageos.org/gapps/) support package, which provides Google services and apps. While the installation manual mentioned different versions of Mind-the-GApps (`normal` and `minimal`), I was not able to see these different flavours on the download page. The `normal` download package was quite minimal though (no gmail app, etc. installed).
+3. During installation, I also installed the suggested [Mind-the-GApps](https://wiki.lineageos.org/gapps/) support package, which provides Google services and apps. While the installation manual mentioned different versions of Mind-the-GApps (`normal` and `minimal`), I was not able to see these different flavors on the download page. The `normal` download package was quite minimal though (no gmail app, etc. installed).
 
 I did run into a problem when trying to boot into the `fastboot` mode of the phone. While the expected logo did show up for a brief moment, afterwards the phone displayed `press key to shutdown` in very small fonts on the top-left corner of the screen.
 
