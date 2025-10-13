@@ -10,7 +10,7 @@ keywords:
 ---
 I am using an (now 5 years old) [Xiaomi Mi Mix 3](https://wiki.lineageos.org/devices/perseus/) as a backup phone for travelling. Given its age, the phone is no longer receiving official updates from Xiaomi, which poses security risks and limits access to new features.
 
-To address this, I installed LineageOS, a popular custom ROM that provides regular updates and enhanced privacy features a couple of years back. Recently, I've updated the phone to the latest support version (LinageOS 22.2) and ran into some problems, which's solutions I want to share here.
+To address this, I installed LineageOS, a popular custom ROM that provides regular updates and enhanced privacy features a couple of years back. Recently, I've updated the phone to the latest support version (LineageOS 22.2) and ran into some problems, whose solutions I want to share here.
 
 Basic steps to update my installation were straight-forward:
 
