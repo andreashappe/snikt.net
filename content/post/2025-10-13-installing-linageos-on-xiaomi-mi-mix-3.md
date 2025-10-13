@@ -20,7 +20,7 @@ Basic steps to update my installation were straight-forward:
 
 I did run into a problem when trying to boot into the `fastboot` mode of the phone. While the expected logo did show up for a brief moment, afterwards the phone displayed `press key to shutdown` in very small fonts on the top-left corner of the screen.
 
-I found a small shell script on [xdaforums](https://xdaforums.com/t/guide-xiaomi-how-to-fix-press-any-key-to-shutdown-while-in-fastboot-linux.4732089/) that solved the problem for me. As I do not want to execute random scripts from the internet as root, I want to share the relevant part (that just setups an USB quirk, this will be gone after a reboot of the Linux system):
+I found a small shell script on [xdaforums](https://xdaforums.com/t/guide-xiaomi-how-to-fix-press-any-key-to-shutdown-while-in-fastboot-linux.4732089/) that solved the problem for me. As I do not want to execute random scripts from the internet as root, I want to share the relevant part (that just sets up a USB quirk, this will be gone after a reboot of the Linux system):
 
 ```bash
 $ echo "18d1:d00d:k" | sudo tee /sys/module/usbcore/parameters/quirks
