@@ -74,6 +74,10 @@ menu:
       name: 'About'
       weight: 1
       url: '/about'
+    - identifier: "papers"
+      name: 'Papers'
+      weight: 2
+      url: '/categories/papers'
     - identifier: "blog"
       name: "Blog"
       weight: 5

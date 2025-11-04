@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Adversarial Bug Reports as a Security Risk in Language Model-Based Automated Program Repair"
+categories: ["Papers"]
+date: 2025-09-04
+---
+
+[arxiv version](https://arxiv.org/abs/2509.05372):
+
+> Large Language Model (LLM) - based Automated Program Repair (APR) systems are increasingly integrated into modern software development workflows, offering automated patches in response to natural language bug reports. However, this reliance on untrusted user input introduces a novel and underexplored attack surface. In this paper, we investigate the security risks posed by adversarial bug reports -- realistic-looking issue submissions crafted to mislead APR systems into producing insecure or harmful code changes. We develop a comprehensive threat model and conduct an empirical study to evaluate the vulnerability of state-of-the-art APR systems to such attacks. Our demonstration comprises 51 adversarial bug reports generated across a spectrum of strategies, from manual curation to fully automated pipelines. We test these against leading APR model and assess both pre-repair defenses (e.g., LlamaGuard variants, PromptGuard variants, Granite-Guardian, and custom LLM filters) and post-repair detectors (GitHub Copilot, CodeQL). Our findings show that current defenses are insufficient: 90\% of crafted bug reports triggered attacker-aligned patches. The best pre-repair filter blocked only 47\%, while post-repair analysis-often requiring human oversight-was effective in just 58\% of cases. To support scalable security testing, we introduce a prototype framework for automating the generation of adversarial bug reports. Our analysis exposes a structural asymmetry: generating adversarial inputs is inexpensive, while detecting or mitigating them remains costly and error-prone. We conclude with practical recommendations for improving the robustness of APR systems against adversarial misuse and highlight directions for future work on trustworthy automated repair. 
